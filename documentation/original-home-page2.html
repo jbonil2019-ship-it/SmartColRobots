@@ -1,0 +1,584 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SmartCol | Smart Devices & Robotics</title>
+
+    <meta
+        name="description"
+        content="Practical robots and smart devices for everyday life. Ask SmartCol about availability and delivery."
+    >
+
+    <style>
+        /* ========================================
+           1. CSS VARIABLES & RESET
+        ======================================== */
+
+        :root {
+            --navy: #101c2c;
+            --blue: #18a8e0;
+            --ink: #16263a;
+            --muted: #607286;
+            --pale: #edf7fb;
+            --line: #dce7ee;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--ink);
+            line-height: 1.55;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .wrap {
+            width: min(1120px, 92%);
+            margin: 0 auto;
+        }
+
+
+        /* ========================================
+           2. HEADER & NAVIGATION
+        ======================================== */
+
+        header {
+            background: var(--navy);
+            color: #fff;
+            padding: 18px 0;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 1.45rem;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+        }
+
+        .logo span {
+            color: var(--blue);
+        }
+
+        nav {
+            display: flex;
+            gap: 22px;
+            font-size: 0.94rem;
+        }
+
+
+        /* ========================================
+           3. HERO SECTION
+        ======================================== */
+
+        .hero {
+            background: linear-gradient(
+                115deg,
+                #101c2c,
+                #183d59
+            );
+            color: white;
+            padding: 76px 0;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .eyebrow {
+            color: #7edaff;
+            font-size: 0.78rem;
+            font-weight: bold;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            margin: 14px 0;
+            font-size: clamp(2.5rem, 5vw, 4.6rem);
+            line-height: 1.02;
+            letter-spacing: -0.05em;
+        }
+
+        .hero p {
+            max-width: 580px;
+            color: #d6e6f0;
+        }
+
+       .hero-art {
+    width: 100%;
+    height: 280px;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #35546b;
+    border-radius: 24px;
+    background: transparent;
+}
+
+.hero-art video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+
+        /* ========================================
+           4. BUTTONS
+        ======================================== */
+
+        .btn {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 13px 19px;
+            border-radius: 8px;
+            background: var(--blue);
+            color: #071a2a;
+            font-weight: 700;
+        }
+
+
+        /* ========================================
+           5. GENERAL SECTIONS & TYPOGRAPHY
+        ======================================== */
+
+        section {
+            padding: 64px 0;
+        }
+
+        h2 {
+            margin: 0 0 10px;
+            font-size: 2rem;
+            letter-spacing: -0.03em;
+        }
+
+        .lead {
+            max-width: 720px;
+            margin-bottom: 28px;
+            color: var(--muted);
+        }
+
+
+        /* ========================================
+           6. PRODUCT CARDS
+        ======================================== */
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .card {
+            padding: 24px;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            background: white;
+        }
+
+        .symbol {
+            display: grid;
+            width: 58px;
+            height: 58px;
+            place-items: center;
+            border-radius: 14px;
+            background: var(--pale);
+            font-size: 1.8rem;
+        }
+
+        .card h3 {
+            margin: 17px 0 6px;
+        }
+
+        .card p {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+
+        /* ========================================
+           7. ABOUT SECTION
+        ======================================== */
+
+        .band {
+            background: var(--pale);
+        }
+
+        .split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 36px;
+            align-items: center;
+        }
+
+        .checklist {
+            padding-left: 20px;
+        }
+
+        .checklist li {
+            margin: 10px 0;
+        }
+
+
+        /* ========================================
+           8. CONTACT SECTION
+        ======================================== */
+
+        .contact {
+            background: var(--navy);
+            color: white;
+        }
+
+        .contact p {
+            color: #d6e6f0;
+        }
+
+
+        /* ========================================
+           9. FOOTER
+        ======================================== */
+
+        footer {
+            padding: 24px 0;
+            background: #091321;
+            color: #c5d4df;
+            font-size: 0.86rem;
+        }
+
+
+        /* ========================================
+           10. RESPONSIVE DESIGN
+        ======================================== */
+
+        @media (max-width: 760px) {
+            .nav {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            nav {
+                gap: 10px;
+                font-size: 0.8rem;
+            }
+
+            .hero {
+                padding: 50px 0;
+            }
+
+            .hero-grid,
+            .split {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-art {
+    height: 190px;
+}
+
+.hero-art video {
+    width: 100%;
+    height: 100%;
+}
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ========================================
+         HEADER
+    ========================================= -->
+
+    <header>
+        <div class="wrap nav">
+
+            <a class="logo" href="#">
+                Smart<span>Col</span>
+            </a>
+
+            <nav aria-label="Main navigation">
+                <a href="#products">Products</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- ========================================
+         MAIN CONTENT
+    ========================================= -->
+
+    <main>
+
+        <!-- HERO SECTION -->
+
+        <section class="hero">
+            <div class="wrap hero-grid">
+
+                <div>
+                    <div class="eyebrow">
+                        Smart devices · Robotics · Everyday innovation
+                    </div>
+
+                    <h1>
+                        Smart technology for a better everyday.
+                    </h1>
+
+                    <p>
+                        Discover practical robots and connected devices
+                        designed to make everyday tasks simpler, more
+                        comfortable and more efficient.
+                    </p>
+
+                    <a class="btn" href="#products">
+                        Explore products
+                    </a>
+                </div>
+
+                
+<div class="hero-art">
+    <video autoplay muted loop playsinline controls>
+        <source
+            src="videos/SmartCol-expanded-smart-home-video-web.mp4"
+            type="video/mp4"
+        >
+        Your browser does not support HTML video.
+    </video>
+</div>
+
+
+            </div>
+        </section>
+
+
+        <!-- PRODUCTS SECTION -->
+
+        <section id="products">
+            <div class="wrap">
+
+                <h2>Explore our categories</h2>
+
+                <p class="lead">
+                    A growing selection of useful technology for homes,
+                    workspaces and everyday life. Ask us about current
+                    models, availability and delivery.
+                </p>
+
+                <div class="grid">
+
+                    <article class="card">
+                        <div class="symbol" aria-hidden="true">◉</div>
+
+                        <h3>Cleaning robots</h3>
+
+                        <p>
+                            Robot vacuum cleaners and vacuum-and-mop
+                            models for convenient floor care.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <div class="symbol" aria-hidden="true">⌂</div>
+
+                        <h3>Smart home &amp; security</h3>
+
+                        <p>
+                            Connected cameras, video doorbells, smart
+                            locks, sensors and automation accessories.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <div class="symbol" aria-hidden="true">⌁</div>
+
+                        <h3>Outdoor robotics</h3>
+
+                        <p>
+                            Explore robotic lawn mowers and devices for
+                            suitable gardens and outdoor spaces.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <div class="symbol" aria-hidden="true">▧</div>
+
+                        <h3>Specialized cleaning</h3>
+
+                        <p>
+                            Window-cleaning and other specialized
+                            robots, subject to model availability.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <div class="symbol" aria-hidden="true">⌘</div>
+
+                        <h3>Connected devices</h3>
+
+                        <p>
+                            Smart plugs, lighting controls and sensors
+                            that help connect everyday routines.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <div class="symbol" aria-hidden="true">＋</div>
+
+                        <h3>New arrivals</h3>
+
+                        <p>
+                            We are exploring useful products. Contact
+                            us to suggest a device or request a category.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ABOUT SECTION -->
+
+        <section id="about" class="band">
+            <div class="wrap split">
+
+                <div>
+                    <div class="eyebrow">About SmartCol</div>
+
+                    <h2>
+                        Useful innovation, clearly explained.
+                    </h2>
+
+                    <p>
+                        SmartCol is building a focused range of robots
+                        and smart devices for people who want practical
+                        technology without unnecessary complexity.
+                    </p>
+
+                    <p>
+                        We aim to make it easier to compare product
+                        features, ask questions and find devices that
+                        fit your needs.
+                    </p>
+                </div>
+
+                <div>
+                    <h3>How we help</h3>
+
+                    <ul class="checklist">
+                        <li>
+                            Product information and feature comparisons
+                        </li>
+                        <li>
+                            Guidance on compatibility and intended use
+                        </li>
+                        <li>
+                            Availability and delivery enquiries
+                        </li>
+                        <li>
+                            Personal contact before you decide
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- CONTACT SECTION -->
+
+        <section id="contact" class="contact">
+            <div class="wrap split">
+
+                <div>
+                    <div class="eyebrow">Get in touch</div>
+
+                    <h2>
+                        Let's find the right device for you.
+                    </h2>
+
+                    <p>
+                        Tell us what you want to make easier at home
+                        or at work. We'll discuss suitable products
+                        and current availability.
+                    </p>
+                </div>
+
+                <div>
+                    <h3>SmartCol</h3>
+
+                    <p>
+                        <strong>Phone / WhatsApp:</strong>
+                        <a href="https://wa.me/393208670068">
+                            +39 320 867 0068
+                        </a>
+                    </p>
+
+                    <p>
+                        <strong>Email:</strong>
+                        Add your business email
+                    </p>
+
+                    <p>
+                        <strong>Website:</strong>
+                        Add your confirmed domain
+                    </p>
+
+                    <a
+                        class="btn"
+                        href="https://wa.me/393208670068"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Message us on WhatsApp
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ========================================
+         FOOTER
+    ========================================= -->
+
+    <footer>
+        <div class="wrap">
+            &copy; SmartCol · Smart devices · Robotics · Everyday innovation
+
+            <br>
+
+            Before launch, add verified business details, privacy
+            information where applicable, terms of sale, shipping,
+            returns and warranty policies.
+        </div>
+    </footer>
+
+</body>
+</html>

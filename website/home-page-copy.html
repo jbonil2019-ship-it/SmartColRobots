@@ -1,0 +1,921 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SmartCol | Smart Living Made Simple</title>
+<meta name="description" content="Discover smart home technology, cleaning robots, smart locks, lighting and security solutions with SmartCol.">
+
+<style>
+:root {
+  --navy: #101c2c;
+  --blue: #18a8e0;
+  --light-blue: #edf7fb;
+  --white: #ffffff;
+  --text: #16263a;
+  --muted: #607286;
+  --border: #dce7ee;
+  --radius: 18px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+  background: #f7faff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button, input {
+  font: inherit;
+}
+
+.container {
+  width: min(1180px, 92%);
+  margin: auto;
+}
+
+header {
+  background: var(--navy);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 3px 18px rgba(9,19,33,.35);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 76px;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -1px;
+}
+
+.logo span {
+  color: var(--blue);
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  color: #7edaff;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 30px;
+  background: var(--blue);
+  color: white;
+  font-weight: 700;
+  border: 0;
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+.btn:hover {
+  background: #1290c4;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--blue);
+  color: var(--blue);
+}
+
+.btn-outline:hover {
+  background: var(--blue);
+  color: white;
+}
+
+.hero {
+  background: linear-gradient(115deg, #101c2c, #183d59);
+  color: #fff;
+  padding: 76px 0;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero .eyebrow {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  color: #7edaff;
+  font-size: .78rem;
+  font-weight: bold;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+h1 {
+  margin: 14px 0;
+  font-size: clamp(2.5rem, 5vw, 4.6rem);
+  line-height: 1.02;
+  letter-spacing: -.05em;
+  color: #fff;
+}
+
+.hero p {
+  max-width: 580px;
+  font-size: 1.05rem;
+  color: #d6e6f0;
+  margin: 0 0 18px;
+}
+
+.hero .btn {
+  border-radius: 8px;
+  padding: 13px 19px;
+  color: #071a2a;
+}
+
+.hero .btn:hover { background: #7edaff; }
+
+.hero .btn-outline {
+  background: transparent;
+  border: 2px solid #7edaff;
+  color: #7edaff;
+}
+
+.hero .btn-outline:hover {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: #071a2a;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hero-art {
+  width: 100%;
+  height: 340px;
+  overflow: hidden;
+  border: 1px solid #35546b;
+  border-radius: 24px;
+  background: #091321;
+}
+
+.hero-art video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+section {
+  padding: 78px 0;
+}
+
+.section-heading {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 38px;
+}
+
+.section-heading h2 {
+  color: var(--navy);
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.section-heading p {
+  color: var(--muted);
+}
+
+.search-row {
+  max-width: 620px;
+  margin: 0 auto 28px;
+  display: flex;
+  gap: 10px;
+}
+
+.search-row input {
+  flex: 1;
+  min-width: 0;
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  padding: 14px 20px;
+  outline: none;
+  background: white;
+}
+
+.search-row input:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px #18a8e022;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 9px;
+  margin-bottom: 32px;
+}
+
+.filter-btn {
+  padding: 9px 16px;
+  border: 1px solid var(--border);
+  background: white;
+  border-radius: 30px;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background: var(--navy);
+  color: white;
+  border-color: var(--navy);
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.category-card {
+  background: white;
+  border: 1px solid #edf2f7;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(16,28,44,.05);
+  transition: .25s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 18px 35px rgba(16,28,44,.12);
+}
+
+.category-card img {
+  display: block;
+  width: 100%;
+  height: 185px;
+  object-fit: cover;
+  background: var(--light-blue);
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  color: var(--navy);
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.card-content p {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.card-link {
+  font-weight: 700;
+  color: var(--blue);
+  font-size: 14px;
+}
+
+.no-results {
+  display: none;
+  text-align: center;
+  color: var(--muted);
+  padding: 30px;
+  grid-column: 1 / -1;
+}
+
+.benefits {
+  background: white;
+}
+
+.benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.benefit {
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: #fbfdff;
+}
+
+.benefit-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 15px;
+  background: var(--light-blue);
+  display: grid;
+  place-items: center;
+  font-size: 25px;
+  margin-bottom: 18px;
+}
+
+.benefit h3 {
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.benefit p {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.step {
+  text-align: center;
+  padding: 25px;
+}
+
+.step-number {
+  width: 55px;
+  height: 55px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 18px;
+  background: var(--blue);
+  color: white;
+  font-weight: 800;
+  font-size: 21px;
+  border-radius: 50%;
+}
+
+.step h3 {
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.step p {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.faq-section {
+  background: white;
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: auto;
+}
+
+details {
+  background: #fbfdff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px 22px;
+  margin-bottom: 12px;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+details p {
+  margin-top: 12px;
+  color: var(--muted);
+}
+
+.contact-panel {
+  background: linear-gradient(120deg, var(--navy), #183d59);
+  border-radius: 28px;
+  padding: 55px 35px;
+  text-align: center;
+  color: white;
+}
+
+.contact-panel h2 {
+  font-size: clamp(28px, 4vw, 40px);
+  margin-bottom: 14px;
+}
+
+.contact-panel p {
+  color: #d6e6f0;
+  max-width: 650px;
+  margin: 0 auto 25px;
+}
+
+.contact-panel .btn {
+  background: white;
+  color: var(--navy);
+}
+
+footer {
+  background: #091321;
+  color: white;
+  padding: 35px 0;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+footer p {
+  color: #c5d4df;
+  font-size: 14px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: #7edaff;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  z-index: 200;
+  background: #20bf65;
+  color: white;
+  border-radius: 50px;
+  padding: 14px 20px;
+  font-weight: 800;
+  box-shadow: 0 8px 25px #0003;
+}
+
+@media (max-width: 950px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-art {
+    height: 280px;
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nav-links {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 650px) {
+  .navbar {
+    padding: 15px 0;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .nav-links {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+
+  .nav-links a {
+    white-space: nowrap;
+  }
+
+  .hero {
+    padding: 48px 0;
+  }
+
+  .hero-art {
+    height: 220px;
+  }
+
+  section {
+    padding: 55px 0;
+  }
+
+  .category-grid,
+  .benefit-grid,
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-card img {
+    height: 220px;
+  }
+
+  .search-row {
+    flex-direction: column;
+  }
+
+  .contact-panel {
+    padding: 38px 22px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container navbar">
+    <a class="logo" href="#home" aria-label="SmartCol home">Smart<span>Col</span>.</a>
+
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#categories">Categories</a>
+      <a href="#benefits">Why SmartCol</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Smart devices · Robotics · Everyday innovation</span>
+        <h1>Make your home smarter, simpler and better.</h1>
+        <p>
+          Explore smart home technology and innovative devices designed
+          to make everyday life more convenient, secure and connected.
+        </p>
+        <div class="hero-buttons">
+          <a class="btn" href="#categories">Explore Products</a>
+          <a class="btn btn-outline" href="https://wa.me/393208670068"
+             target="_blank" rel="noopener">Ask Us on WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="hero-art">
+        <video muted autoplay loop playsinline preload="auto"
+               poster="images/smartcol-video-poster.jpg">
+          <source src="videos/SmartCol-expanded-smart-home-video-web.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <section id="categories">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">Explore our range</span>
+        <h2>Smart solutions for every part of your life</h2>
+        <p>
+          Explore our product categories and contact us for availability,
+          specifications and recommendations.
+        </p>
+      </div>
+
+      <div class="search-row">
+        <input type="search" id="searchInput"
+               placeholder="Search product categories..."
+               aria-label="Search product categories">
+      </div>
+
+      <div class="filters" aria-label="Category filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="cleaning">Cleaning</button>
+        <button class="filter-btn" data-filter="security">Security</button>
+        <button class="filter-btn" data-filter="lighting">Lighting</button>
+        <button class="filter-btn" data-filter="outdoor">Outdoor</button>
+        <button class="filter-btn" data-filter="accessories">Accessories</button>
+      </div>
+
+      <div class="category-grid" id="categoryGrid">
+
+        <article class="category-card" data-category="cleaning">
+          <img src="https://images.unsplash.com/photo-1563298723-dcfebaa392e3?auto=format&fit=crop&w=800&q=80"
+               alt="Modern home cleaning equipment" loading="lazy">
+          <div class="card-content">
+            <h3>Cleaning Robots</h3>
+            <p>Discover convenient solutions for keeping your home clean.</p>
+            <a class="card-link"
+               href="https://wa.me/393208670068?text=Hello%20SmartCol%2C%20I%27m%20interested%20in%20cleaning%20robots."
+               target="_blank" rel="noopener">Ask about products →</a>
+          </div>
+        </article>
+
+        <article class="category-card" data-category="cleaning">
+          <img src="https://images.unsplash.com/photo-1558317374-067fb5f30001?auto=format&fit=crop&w=800&q=80"
+               alt="Cleaning equipment in a modern home" loading="lazy">
+          <div class="card-content">
+            <h3>Window-Cleaning Robots</h3>
+            <p>Explore technology designed to simplify window cleaning.</p>
+            <a class="card-link"
+               href="https://wa.me/393208670068?text=Hello%20SmartCol%2C%20I%27m%20interested%20in%20window-cleaning%20robots."
+               target="_blank" rel="noopener">Ask about products →</a>
+          </div>
+        </article>
+
+        <article class="category-card" data-category="security">
+          <img src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=800&q=80"
+               alt="Smart home security technology" loading="lazy">
+          <div class="card-content">
+            <h3>Smart Locks & Padlocks</h3>
+            <p>Explore connected access solutions for added convenience.</p>
+            <a class="card-link"
+               href="https://wa.me/393208670068?text=Hello%20SmartCol%2C%20I%27m%20interested%20in%20smart%20locks."
+               target="_blank" rel="noopener">Ask about products →</a>
+          </div>
+        </article>
+
+        <article class="category-card" data-category="lighting">
+          <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80"
+               alt="Modern lighting in a room" loading="lazy">
+          <div class="card-content">
+            <h3>Smart Lighting</h3>
+            <p>Create the right atmosphere with connected lighting ideas.</p>
+            <a class="card-link"
+               href="https://wa.me/393208670068?text=Hello%20SmartCol%2C%20I%27m%20interested%20in%20smart%20lighting."
+               target="_blank" rel="noopener">Ask about products →</a>
+          </div>
+        </article>
+
+        <article class="category-card" data-category="outdoor">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80"
+               alt="Outdoor equipment and garden" loading="lazy">
+          <div class="card-content">
+            <h3>Outdoor Robotics</h3>
+            <p>Discover smart technology for your garden and outdoor spaces.</p>
+            <a class="card-link"
+               href="https://wa.me/393208670068?text=Hello%20SmartCol%2C%20I%27m%20interested%20in%20outdoor%20robotics."
+               target="_blank" rel="noopener">Ask about products →</a>
+          </div>
+        </article>
+
+        <article class="category-card" data-category="security">
+          <img src="https://images.unsplash.com/photo-1558008258-3256797b43f3?auto=format&fit=crop&w=800&q=80"
+               alt="Smart security device" loading="lazy">
+          <div class="card-content">
+            <h3>Smart Security</h3>
+            <p>Explore devices designed to help you monitor your home.</p>
+            <a class="card-link"
+               href="https://wa.me/393208670068?text=Hello%20SmartCol%2C%20I%27m%20interested%20in%20smart%20security."
+               target="_blank" rel="noopener">Ask about products →</a>
+          </div>
+        </article>
+
+        <article class="category-card" data-category="accessories">
+          <img src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=800&q=80"
+               alt="Connected home devices" loading="lazy">
+          <div class="card-content">
+            <h3>Smart Plugs & Sensors</h3>
+            <p>Make everyday devices and routines more connected.</p>
+            <a class="card-link"
+               href="https://wa.me/393208670068?text=Hello%20SmartCol%2C%20I%27m%20interested%20in%20smart%20plugs%20and%20sensors."
+               target="_blank" rel="noopener">Ask about products →</a>
+          </div>
+        </article>
+
+        <article class="category-card" data-category="accessories">
+          <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=800&q=80"
+               alt="Modern home interior" loading="lazy">
+          <div class="card-content">
+            <h3>New Arrivals</h3>
+            <p>Ask us about new products and the latest smart-home ideas.</p>
+            <a class="card-link"
+               href="https://wa.me/393208670068?text=Hello%20SmartCol%2C%20please%20tell%20me%20about%20your%20new%20arrivals."
+               target="_blank" rel="noopener">Discover more →</a>
+          </div>
+        </article>
+
+        <p class="no-results" id="noResults">
+          No categories match your search. Try another keyword.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="benefits" id="benefits">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">The SmartCol difference</span>
+        <h2>Technology without the complexity</h2>
+        <p>We want choosing smart technology to feel straightforward and accessible.</p>
+      </div>
+
+      <div class="benefit-grid">
+        <div class="benefit">
+          <div class="benefit-icon">⌂</div>
+          <h3>Solutions for everyday life</h3>
+          <p>Explore technology for your home, garden, security and daily routines.</p>
+        </div>
+
+        <div class="benefit">
+          <div class="benefit-icon">♡</div>
+          <h3>Friendly support</h3>
+          <p>Contact us with questions before choosing a product.</p>
+        </div>
+
+        <div class="benefit">
+          <div class="benefit-icon">✦</div>
+          <h3>Discover new ideas</h3>
+          <p>Find new ways to make your home more connected and convenient.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how-it-works">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">Simple and convenient</span>
+        <h2>How it works</h2>
+        <p>Start exploring and get help finding the right solution for your needs.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Explore</h3>
+          <p>Browse the categories and discover products that interest you.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Ask</h3>
+          <p>Message SmartCol to ask about specifications, compatibility and availability.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Choose</h3>
+          <p>Compare your options and decide which solution best suits your needs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">Need help?</span>
+        <h2>Frequently asked questions</h2>
+      </div>
+
+      <div class="faq-list">
+        <details>
+          <summary>How can I find out if a product is available?</summary>
+          <p>Contact SmartCol through WhatsApp and tell us which product you are interested in.</p>
+        </details>
+
+        <details>
+          <summary>Can I ask questions before buying?</summary>
+          <p>Yes. You can contact us to ask about features, compatibility and product details.</p>
+        </details>
+
+        <details>
+          <summary>Can you help me choose the right device?</summary>
+          <p>Tell us what you need and how you plan to use the device, and ask us for guidance.</p>
+        </details>
+
+        <details>
+          <summary>Can I buy products directly through this website?</summary>
+          <p>This version of the website is a product-discovery site. It does not yet include a shopping cart or online payment system.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="contact-panel">
+        <h2>Ready to discover smarter living?</h2>
+        <p>
+          Have a question or need help finding the right product?
+          Contact SmartCol and tell us what you are looking for.
+        </p>
+        <a class="btn"
+           href="https://wa.me/393208670068?text=Hello%20SmartCol%2C%20I%27d%20like%20to%20know%20more%20about%20your%20products."
+           target="_blank" rel="noopener">
+          Chat with SmartCol on WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <a class="logo" href="#home" style="color:white">
+      Smart<span>Col</span>.
+    </a>
+
+    <p>© <span id="year"></span> SmartCol. All rights reserved.</p>
+
+    <div class="footer-links">
+      <a href="#categories">Products</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<a class="whatsapp-float"
+   href="https://wa.me/393208670068"
+   target="_blank" rel="noopener"
+   aria-label="Contact SmartCol on WhatsApp">
+  WhatsApp
+</a>
+
+<script>
+const searchInput = document.getElementById("searchInput");
+const cards = [...document.querySelectorAll(".category-card")];
+const filterButtons = [...document.querySelectorAll(".filter-btn")];
+const noResults = document.getElementById("noResults");
+
+let activeFilter = "all";
+
+function updateCards() {
+  const searchTerm = searchInput.value.toLowerCase().trim();
+  let visibleCount = 0;
+
+  cards.forEach(card => {
+    const category = card.dataset.category;
+    const text = card.innerText.toLowerCase();
+
+    const matchesFilter =
+      activeFilter === "all" || category === activeFilter;
+
+    const matchesSearch = text.includes(searchTerm);
+    const show = matchesFilter && matchesSearch;
+
+    card.style.display = show ? "" : "none";
+
+    if (show) visibleCount++;
+  });
+
+  noResults.style.display = visibleCount ? "none" : "block";
+}
+
+searchInput.addEventListener("input", updateCards);
+
+filterButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    filterButtons.forEach(item => item.classList.remove("active"));
+    button.classList.add("active");
+
+    activeFilter = button.dataset.filter;
+    updateCards();
+  });
+});
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+</script>
+
+</body>
+</html>
+ Everyday innovation<br>Before launch, add verified business details, privacy information where applicable, terms of sale, shipping, returns and warranty policies.</div></footer></body></html>

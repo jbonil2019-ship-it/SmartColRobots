@@ -1,0 +1,17 @@
+Put your product and category photos in this folder, for example:
+
+    robot-vacuum.jpg
+    window-robot.jpg
+    lawn-mower.jpg
+    smart-lock.jpg
+    camera-doorbell.jpg
+    smart-lighting.jpg
+    smart-plugs.jpg
+
+Also add the still image shown while the video loads:
+
+    smartcol-video-poster.jpg
+
+Then update the img src and video poster paths in website/index.html.
+The current images are generic placeholders (Unsplash links), not your
+own products.
