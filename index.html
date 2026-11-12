@@ -252,7 +252,7 @@ h3{color:var(--navy);}
   /* ---------- promozioni: richiami forti ---------- */
   .promo.deal{position:relative; padding-top:26px;}
   .promo-tag{
-    position:absolute; top:-13px; left:20px;
+    position:absolute; top:-15px; left:22px;
     display:inline-flex; align-items:center; justify-content:center;
     background:var(--blue); color:#071a2a; font-weight:900; font-size:12.5px;
     letter-spacing:.04em; text-transform:uppercase;
@@ -267,6 +267,20 @@ h3{color:var(--navy);}
     border-top:1px dashed rgba(126,218,255,.3); padding-top:10px;
   }
   .promo-when b{color:#fff;}
+
+
+  /* ---------- tre promozioni forti ---------- */
+  .promo-three{grid-template-columns:repeat(auto-fit,minmax(300px,1fr));}
+  .promo.hero-deal{padding:30px 26px 24px;}
+  .promo.hero-deal h3{font-size:1.35rem; line-height:1.22; margin-bottom:10px;}
+  .promo.hero-deal p{font-size:.98rem;}
+  .promo.hero-deal .promo-tag{
+    top:-16px; font-size:14px; padding:8px 18px;
+    background:linear-gradient(135deg,#18a8e0,#7edaff);
+    box-shadow:0 8px 22px rgba(24,168,224,.55);
+  }
+  .promo.hero-deal .promo-when{font-size:12px; margin-top:14px;}
+  .promo.hero-deal p b{color:#fff;}
 
 /* ---------- services / steps ---------- */
 .svc{display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:22px;}
@@ -344,7 +358,7 @@ footer a:hover{color:var(--sky);}
 <div class="topbar">
   <div class="container">
     <div>Smart devices · Robotics · Everyday innovation</div>
-    <div>International enquiries welcome · <a href="tel:+393208670068">Call: +39 320 867 0068</a></div>
+    <div>International enquiries welcome · Rome, Italy</div>
   </div>
 </div>
 
@@ -666,56 +680,34 @@ footer a:hover{color:var(--sky);}
       <p>Offers we can actually honour. When one ends we take it off this page rather than leave it standing.</p>
     </div>
 
-    <div class="promo-grid">
+    <div class="promo-grid promo-three">
 
-      <div class="promo deal">
+      <div class="promo deal hero-deal">
         <span class="promo-tag">2 × 1</span>
-        <h3>Two for one on the heaters</h3>
-        <p>Buy one portable heater and take a second one for half price — or pick any two items
-           from the range and we agree a reduced total with you. Ask when you write.</p>
-        <span class="promo-when">Ends 30 November 2026</span>
+        <h3>Two heaters for the price of one</h3>
+        <p>Buy any heater and take a second one <b>completely free</b> — the portable HE-132
+           or the plug-in wall model. One for the living room, one for the bedroom.</p>
+        <span class="promo-when">First 20 orders · ends 30 November 2026</span>
       </div>
 
-      <div class="promo deal">
-        <span class="promo-tag">−20 %</span>
-        <h3>Twenty per cent off the window robot</h3>
-        <p>The Window-Cleaning Robot at <b>€69</b> instead of €86,67 while this launch stock lasts.
-           The UPS backup and the safety rope are included as always.</p>
+      <div class="promo deal hero-deal">
+        <span class="promo-tag">−30 %</span>
+        <h3>Thirty per cent off the window robot</h3>
+        <p>The Window-Cleaning Robot at <b>€60,67</b> instead of €86,67. 2800Pa, ultra-thin,
+           UPS backup and safety rope included — the launch price while our first pallet lasts.</p>
         <span class="promo-when">While stock lasts · <b>7 left</b></span>
       </div>
 
-      <div class="promo deal">
-        <span class="promo-tag">Free</span>
-        <h3>Delivery free inside Rome</h3>
-        <p>We cover the delivery on any order inside the city of Rome — robot vacuum, window robot,
-           both heaters, padlock and video doorbell.</p>
+      <div class="promo deal hero-deal">
+        <span class="promo-tag">Free delivery</span>
+        <h3>Delivered free anywhere in Rome</h3>
+        <p>We bring it to your door and you pay nothing for delivery — on every item in the
+           catalogue, including the e-bike rental handover.</p>
         <span class="promo-when">Ends 31 December 2026</span>
       </div>
 
-      <div class="promo deal">
-        <span class="promo-tag">7th day free</span>
-        <h3>E-bike: hire six days, ride seven</h3>
-        <p>Book a full week on one of our folding e-bikes and the seventh day costs nothing.
-           Helmet, charger and lock are included as always.</p>
-        <span class="promo-when">Ends 28 February 2027</span>
-      </div>
-
-      <div class="promo deal">
-        <span class="promo-tag">Try first</span>
-        <h3>Test before you pay</h3>
-        <p>On the items marked in the catalogue you can try the device before committing.
-           If it is not right for your home, you simply do not buy it.</p>
-        <span class="promo-when">Always on</span>
-      </div>
-
-      <div class="promo deal">
-        <span class="promo-tag">Refer</span>
-        <h3>Send a friend, get €10 back</h3>
-        <p>Send us someone who buys and you get €10 off your next order from SmartCol.</p>
-        <span class="promo-when">Always on</span>
-      </div>
-
     </div>
+</div>
 
     <p class="promo-terms">
       <b>Terms of the offers.</b> Opening offer, launched 12 November 2026, valid while stock lasts.
