@@ -3,316 +3,346 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SmartCol | Smart Devices, Robotics & Everyday Innovation</title>
-<meta name="description" content="SmartCol: robot vacuums, window-cleaning robots, robotic lawn mowers, smart locks, cameras and smart-home devices. Personal advice by phone or WhatsApp: +39 320 867 0068.">
+<title>SmartCol | Smart Devices, Robotics &amp; Everyday Innovation</title>
+<meta name="description" content="SmartCol: robot vacuums, window-cleaning robots, robotic lawn mowers, smart locks, cameras and smart-home devices. Pay by card. Personal advice: +39 320 867 0068.">
 <meta name="theme-color" content="#101c2c">
-<meta property="og:title" content="SmartCol | Smart Devices & Robotics">
-<meta property="og:description" content="Practical robots and smart devices for everyday life. Call or WhatsApp us for advice, availability and delivery.">
-<meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23101c2c'/%3E%3Ctext x='32' y='43' font-size='32' font-weight='800' text-anchor='middle' fill='%2318a8e0' font-family='Arial'%3ESC%3C/text%3E%3C/svg%3E">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "SmartCol",
-  "slogan": "Smart solutions for everyday life.",
-  "telephone": "+39 320 867 0068",
-  "founder": { "@type": "Person", "name": "Javier Bonilla" },
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+39 320 867 0068",
-    "contactType": "sales",
-    "availableLanguage": ["English", "Spanish", "Italian"]
-  }
-}
-</script>
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23101c2c'/%3E%3Ctext x='32' y='43' font-size='32' font-weight='800' text-anchor='middle' fill='%2318a8e0' font-family='Arial'%3ESC%3C/text%3E%3C/svg%3E">
 
 <style>
-:root {
-  --navy: #101c2c;
-  --navy-deep: #091321;
-  --navy-mid: #183d59;
-  --blue: #18a8e0;
-  --blue-dark: #1290c4;
-  --sky: #7edaff;
-  --ink: #16263a;
-  --muted: #607286;
-  --pale: #edf7fb;
-  --line: #dce7ee;
-  --wa: #20bf65;
-  --radius: 16px;
+:root{
+  --navy:#101c2c; --navy-deep:#091321; --navy-mid:#183d59;
+  --blue:#18a8e0; --blue-dark:#1290c4; --sky:#7edaff;
+  --ink:#16263a; --muted:#607286; --pale:#edf7fb; --line:#dce7ee;
+  --wa:#20bf65; --radius:16px;
+  --cyan:#18a8e0; --cyan-d:#1290c4; --navy-2:#183d59;
 }
-
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; scroll-padding-top: 90px; }
-body {
-  font-family: "Segoe UI", Inter, Arial, Helvetica, sans-serif;
-  color: var(--ink);
-  background: #fff;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth; scroll-padding-top:90px;}
+body{
+  font-family:"Segoe UI", Inter, Arial, Helvetica, sans-serif;
+  color:var(--ink); background:#fff; line-height:1.6; -webkit-font-smoothing:antialiased;
 }
-img, video { max-width: 100%; }
-a { color: inherit; text-decoration: none; }
-.container { width: min(1160px, 92%); margin: 0 auto; }
-svg.i { width: 1.15em; height: 1.15em; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; vertical-align: -0.2em; }
-svg.i.fill { fill: currentColor; stroke: none; }
+img,video{max-width:100%;}
+a{color:inherit; text-decoration:none;}
+.container{width:min(1160px,92%); margin:0 auto;}
+code{background:#eef2f6; padding:2px 6px; border-radius:5px; font-size:13px;}
+svg.i{width:1.15em; height:1.15em; fill:none; stroke:currentColor; stroke-width:2;
+  stroke-linecap:round; stroke-linejoin:round; vertical-align:-.2em;}
+svg.i.fill{fill:currentColor; stroke:none;}
 
-/* ---------- Top bar ---------- */
-.topbar { background: var(--navy-deep); color: #c5d4df; font-size: 13px; }
-.topbar .container { display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 38px; flex-wrap: wrap; }
-.topbar a { color: #fff; font-weight: 600; }
-.topbar a:hover { color: var(--sky); }
-.topbar .tb-right { display: flex; gap: 22px; }
+/* ---------- top bar ---------- */
+.topbar{background:var(--navy-deep); color:#96a9bd; font-size:13px; padding:10px 0;}
+.topbar .container{display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap;}
+.topbar a{color:#fff; font-weight:700;}
 
-/* ---------- Header ---------- */
-header {
-  background: var(--navy);
-  color: #fff;
-  position: sticky; top: 0; z-index: 100;
-  border-bottom: 1px solid rgba(255,255,255,.07);
+/* ---------- header ---------- */
+header{background:var(--navy); color:#fff; position:sticky; top:0; z-index:100;
+  border-bottom:1px solid rgba(255,255,255,.07);}
+.navbar{display:flex; align-items:center; justify-content:space-between; gap:20px; min-height:76px;}
+.logo{font-size:1.6rem; font-weight:800; letter-spacing:-.04em; color:#fff;}
+.logo span{color:var(--blue);}
+.nav-links{display:flex; gap:26px; align-items:center; font-size:.94rem;}
+.nav-links a:not(.btn){color:#d6e6f0; font-weight:500;}
+.nav-links a:not(.btn):hover{color:var(--sky);}
+
+.btn{display:inline-flex; align-items:center; gap:9px; justify-content:center; padding:13px 22px;
+  border-radius:10px; border:2px solid transparent; background:var(--blue); color:#071a2a;
+  font-weight:700; font-size:15px; cursor:pointer; font-family:inherit; transition:transform .2s, background .2s, box-shadow .2s;}
+.btn:hover{background:var(--sky); transform:translateY(-2px); box-shadow:0 10px 24px rgba(24,168,224,.28);}
+.btn-wa{background:var(--wa); color:#fff;}
+.btn-wa:hover{background:#1ba856;}
+.btn-ghost{background:transparent; border-color:rgba(126,218,255,.6); color:var(--sky);}
+.btn-ghost:hover{background:rgba(126,218,255,.12); box-shadow:none;}
+.btn-sm{padding:10px 18px; font-size:14px;}
+
+/* ---------- HERO — exactly the previous version ---------- */
+.hero{background:linear-gradient(115deg,var(--navy),var(--navy-mid)); color:#fff;
+  padding:40px 0 76px; position:relative; overflow:hidden;}
+.hero::before{content:""; position:absolute; right:-160px; top:-160px; width:520px; height:520px;
+  border-radius:50%; background:radial-gradient(circle, rgba(24,168,224,.22), transparent 70%);}
+.hero-grid{display:grid; grid-template-columns:1.08fr .92fr; gap:48px; align-items:center; position:relative;}
+.eyebrow{color:var(--sky); font-size:.78rem; font-weight:700; letter-spacing:.15em; text-transform:uppercase;}
+.hero h1{margin:12px 0; font-size:clamp(2.4rem,5vw,4.3rem); line-height:1.04; letter-spacing:-.05em;}
+.hero h1 em{font-style:normal; color:var(--blue);}
+.hero p.lead{max-width:560px; color:#d6e6f0; font-size:1.08rem; margin-bottom:24px;}
+.hero-cta{display:flex; flex-wrap:wrap; gap:12px;}
+.hero-points{display:flex; flex-wrap:wrap; gap:10px 26px; margin-top:26px; color:#c5d4df; font-size:.92rem;}
+.hero-points span::before{content:"✓"; color:var(--blue); font-weight:800; margin-right:8px;}
+.hero-art{box-sizing:border-box; width:100%; aspect-ratio:16/9; max-height:440px; overflow:hidden;
+  border:1px solid #35546b; border-radius:24px; background:var(--navy-deep);
+  box-shadow:0 30px 70px rgba(0,0,0,.4); position:relative;}
+.hero-art video{display:block; width:100%; height:100%; object-fit:cover; background:var(--navy-deep);}
+.hero-art.video-missing::after{
+  content:"Add your video at  videos/smartcol-hero.mp4";
+  position:absolute; inset:auto 16px 16px 16px; text-align:center; color:#8fb4cc; font-size:12.5px;
+  background:rgba(9,19,33,.72); border:1px solid #33546b; border-radius:10px; padding:8px 12px;}
+
+/* ---------- trust strip ---------- */
+.trust{background:#fff; border-bottom:1px solid var(--line);}
+.trust-grid{display:grid; grid-template-columns:repeat(4,1fr);}
+.trust-item{display:flex; gap:14px; align-items:center; padding:26px 20px; border-right:1px solid var(--line);}
+.trust-item:last-child{border-right:0;}
+.trust-ico{flex:none; width:46px; height:46px; border-radius:12px; background:var(--pale);
+  color:var(--blue-dark); display:grid; place-items:center; font-size:22px;}
+.trust-item strong{display:block; color:var(--navy); font-size:.97rem; line-height:1.25;}
+.trust-item small{color:var(--muted); font-size:.84rem;}
+
+/* ---------- sections ---------- */
+section{padding:84px 0;}
+.section-heading{text-align:center; max-width:720px; margin:0 auto 44px;}
+.section-heading .eyebrow{color:var(--blue-dark);}
+.section-heading h2{margin:10px 0 12px; font-size:clamp(1.8rem,3.6vw,2.6rem); line-height:1.15;
+  letter-spacing:-.03em; color:var(--navy);}
+.section-heading p{color:var(--muted); font-size:1.04rem;}
+h3{color:var(--navy);}
+
+/* ---------- shop ---------- */
+.shop{display:grid; grid-template-columns:1fr 340px; gap:32px; align-items:start;}
+.productlist{display:grid; grid-template-columns:repeat(auto-fill,minmax(258px,1fr)); gap:22px;}
+.card{background:#fff; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden;
+  display:flex; flex-direction:column; transition:transform .25s, box-shadow .25s;}
+.card:hover{transform:translateY(-5px); box-shadow:0 20px 40px rgba(16,28,44,.13);}
+.shot{position:relative; background:var(--pale); aspect-ratio:4/3; overflow:hidden;}
+.shot img{width:100%; height:100%; object-fit:cover;}
+.badge{position:absolute; left:12px; top:12px; background:rgba(16,28,44,.85); color:#fff;
+  font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  padding:5px 10px; border-radius:20px;}
+.badge.hot{background:var(--blue); color:#071a2a;}
+.card-body{padding:18px; display:flex; flex-direction:column; flex:1;}
+.card-body h3{font-size:1.04rem; margin-bottom:7px;}
+.card-body > p{font-size:.9rem; color:var(--muted); margin-bottom:14px;}
+.spec{list-style:none; font-size:.85rem; color:var(--muted); margin-bottom:4px;}
+.spec li{display:flex; justify-content:space-between; gap:12px; padding:5px 0; border-bottom:1px dashed var(--line);}
+.spec li:last-child{border-bottom:0;}
+.spec li b{color:var(--navy); font-weight:600; text-align:right;}
+.row{display:flex; gap:8px; margin-top:14px;}
+.row .btn{flex:1; padding:11px 12px; font-size:13.5px; border-radius:9px;}
+
+/* ---------- prices : one clean block per card ---------- */
+.price{display:flex; flex-wrap:wrap; align-items:baseline; gap:8px; margin:18px 0 0; padding:13px 15px;
+  background:linear-gradient(180deg,#f5fbfe,#e9f4fa); border:1px solid #d2e6f1;
+  border-left:4px solid var(--blue); border-radius:12px;}
+.price .amount{font-size:1.55rem; font-weight:800; letter-spacing:-.035em; color:var(--navy);
+  line-height:1; white-space:nowrap;}
+.price .cur{font-size:.9rem; font-weight:800; color:var(--blue-dark);}
+.price .note{flex:1 1 100%; font-size:.79rem; font-weight:600; color:var(--muted);
+  line-height:1.4; margin-top:1px;}
+.price.soft .amount{font-size:1.12rem; color:var(--navy-mid);}
+.price.rental{background:linear-gradient(180deg,#f3fdf8,#e7f9f0); border-color:#c8ecd9; border-left-color:var(--wa);}
+.price.rental .cur,.price.rental .amount{color:#0f7a41;}
+
+/* ---------- checkout column ---------- */
+.checkoutbar{position:sticky; top:96px; background:#fff; border:1px solid var(--line);
+  border-radius:var(--radius); overflow:hidden; box-shadow:0 14px 40px rgba(16,28,44,.09);}
+.checkoutbar .head{background:var(--navy); padding:20px 22px;}
+.checkoutbar .head h3{margin:0; font-size:1.05rem; color:#fff;}
+.checkoutbar .head p{margin:5px 0 0; font-size:13px; color:#9fb2c9;}
+.thumbs{display:grid; grid-template-columns:repeat(4,1fr); gap:8px; padding:18px 22px 0;}
+.thumbs .t{aspect-ratio:1; border-radius:9px; overflow:hidden; background:var(--pale);
+  border:1.5px solid var(--line); cursor:pointer; transition:border-color .15s, transform .15s;}
+.thumbs .t:hover{border-color:var(--blue); transform:translateY(-2px);}
+.thumbs .t img{width:100%; height:100%; object-fit:cover;}
+.paylabel{font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase;
+  color:#93a3b6; padding:16px 22px 8px;}
+
+/* ---------- carrito compacto ---------- */
+
+/* ---------- carrello : compatto, pleghevole, non cresce mai ---------- */
+.cart-toggle{
+  width:100%; display:flex; align-items:center; justify-content:space-between; gap:10px;
+  background:none; border:0; padding:14px 22px 4px; cursor:pointer; font-family:inherit;
+  font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:#93a3b6;
 }
-.navbar { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 76px; }
-.logo { font-size: 1.6rem; font-weight: 800; letter-spacing: -.04em; }
-.logo span { color: var(--blue); }
-.nav-links { display: flex; gap: 26px; align-items: center; font-size: .94rem; }
-.nav-links a:not(.btn) { color: #d6e6f0; font-weight: 500; transition: color .2s; }
-.nav-links a:not(.btn):hover { color: var(--sky); }
-
-.btn {
-  display: inline-flex; align-items: center; gap: 9px; justify-content: center;
-  padding: 13px 22px; border-radius: 10px; border: 2px solid transparent;
-  background: var(--blue); color: #071a2a; font-weight: 700; font-size: 15px;
-  cursor: pointer; transition: transform .2s, background .2s, box-shadow .2s; font-family: inherit;
+.cart-toggle:hover{color:var(--navy);}
+.cart-toggle .arw{display:inline-block; font-size:9px; transition:transform .2s;}
+.cart-toggle .arw.up{transform:rotate(180deg);}
+.cartlist{
+  max-height:0; overflow:hidden; padding:0 22px; transition:max-height .25s ease;
 }
-.btn:hover { background: var(--sky); transform: translateY(-2px); box-shadow: 0 10px 24px rgba(24,168,224,.28); }
-.btn-wa { background: var(--wa); color: #fff; }
-.btn-wa:hover { background: #1ba856; box-shadow: 0 10px 24px rgba(32,191,101,.3); }
-.btn-ghost { background: transparent; border-color: rgba(126,218,255,.6); color: var(--sky); }
-.btn-ghost:hover { background: rgba(126,218,255,.12); box-shadow: none; }
-.btn-sm { padding: 10px 18px; font-size: 14px; }
-
-/* ---------- Hero ---------- */
-.hero { background: linear-gradient(115deg, var(--navy), var(--navy-mid)); color: #fff; padding: 40px 0 76px; position: relative; overflow: hidden; }
-.hero::before { content: ""; position: absolute; right: -160px; top: -160px; width: 520px; height: 520px; border-radius: 50%; background: radial-gradient(circle, rgba(24,168,224,.22), transparent 70%); }
-.hero-grid { display: grid; grid-template-columns: 1.08fr .92fr; gap: 48px; align-items: center; position: relative; }
-.eyebrow { color: var(--sky); font-size: .78rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
-.hero h1 { margin: 12px 0; font-size: clamp(2.4rem, 5vw, 4.3rem); line-height: 1.04; letter-spacing: -.05em; }
-.hero h1 em { font-style: normal; color: var(--blue); }
-.hero p.lead { max-width: 560px; color: #d6e6f0; font-size: 1.08rem; margin-bottom: 24px; }
-.hero-cta { display: flex; flex-wrap: wrap; gap: 12px; }
-.hero-points { display: flex; flex-wrap: wrap; gap: 10px 26px; margin-top: 26px; color: #c5d4df; font-size: .92rem; }
-.hero-points span::before { content: "✓"; color: var(--blue); font-weight: 800; margin-right: 8px; }
-.hero-art {
-  box-sizing: border-box; width: 100%; aspect-ratio: 16 / 9; max-height: 440px; overflow: hidden;
-  border: 1px solid #35546b; border-radius: 24px; background: var(--navy-deep);
-  box-shadow: 0 30px 70px rgba(0,0,0,.4); position: relative;
+.cartlist.open{max-height:196px; overflow-y:auto; padding:6px 22px 0;}
+.cartlist::-webkit-scrollbar{width:6px;}
+.cartlist::-webkit-scrollbar-thumb{background:#c8d8e4; border-radius:3px;}
+.cartlist .li{display:flex; align-items:flex-start; gap:10px; padding:9px 0; border-bottom:1px solid #eef2f6;}
+.cartlist .li:last-child{border-bottom:0;}
+.cartlist .li .nm{flex:1; min-width:0; font-size:13.5px; line-height:1.35; color:var(--ink);}
+.cartlist .li .nm small{display:block; color:#93a3b6; font-size:11.5px; font-weight:600; margin-top:2px;}
+.cartlist .li .qt{flex:none; display:flex; align-items:center; gap:5px;}
+.cartlist .li .qt button{
+  width:22px; height:22px; border-radius:6px; border:1px solid #d5e2ec; background:#fff;
+  color:var(--navy); font-weight:800; font-size:13px; line-height:1; cursor:pointer; padding:0;
 }
-.hero-art video { display: block; width: 100%; height: 100%; object-fit: cover; }
-@media (min-width: 1001px) { .hero-art { margin-top: -30px; } }
-
-/* ---------- Trust strip ---------- */
-.trust { background: #fff; border-bottom: 1px solid var(--line); }
-.trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
-.trust-item { display: flex; gap: 14px; align-items: center; padding: 26px 20px; border-right: 1px solid var(--line); }
-.trust-item:last-child { border-right: 0; }
-.trust-ico { flex: none; width: 46px; height: 46px; border-radius: 12px; background: var(--pale); color: var(--blue-dark); display: grid; place-items: center; font-size: 22px; }
-.trust-item strong { display: block; color: var(--navy); font-size: .97rem; line-height: 1.25; }
-.trust-item small { color: var(--muted); font-size: .84rem; }
-
-/* ---------- Sections ---------- */
-section { padding: 84px 0; }
-.section-heading { text-align: center; max-width: 720px; margin: 0 auto 44px; }
-.section-heading .eyebrow { color: var(--blue-dark); }
-.section-heading h2 { margin: 10px 0 12px; font-size: clamp(1.8rem, 3.6vw, 2.6rem); line-height: 1.15; letter-spacing: -.03em; color: var(--navy); }
-.section-heading p { color: var(--muted); font-size: 1.04rem; }
-
-/* ---------- Products ---------- */
-.filters { display: flex; flex-wrap: wrap; justify-content: center; gap: 9px; margin-bottom: 34px; }
-.filter-btn { padding: 9px 18px; border: 1px solid var(--line); background: #fff; border-radius: 30px; cursor: pointer; color: var(--ink); font-size: 14px; font-family: inherit; transition: .2s; }
-.filter-btn.active, .filter-btn:hover { background: var(--navy); color: #fff; border-color: var(--navy); }
-.category-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
-.category-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; transition: transform .25s, box-shadow .25s; }
-.category-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(16,28,44,.13); }
-.category-card .thumb { position: relative; }
-.category-card img { display: block; width: 100%; height: 190px; object-fit: cover; background: var(--pale); }
-.category-card .tag { position: absolute; left: 12px; top: 12px; background: rgba(16,28,44,.85); color: #fff; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 5px 10px; border-radius: 20px; }
-.card-content { padding: 20px; display: flex; flex-direction: column; flex: 1; }
-.card-content h3 { color: var(--navy); font-size: 1.1rem; margin-bottom: 8px; }
-.card-content p { font-size: .92rem; color: var(--muted); margin-bottom: 16px; flex: 1; }
-.card-link { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; color: var(--blue-dark); font-size: .92rem; }
-.card-link:hover { color: var(--navy); }
-.no-results { display: none; text-align: center; color: var(--muted); padding: 30px; grid-column: 1 / -1; }
-
-/* ---------- Why us (dark) ---------- */
-.why { background: linear-gradient(115deg, var(--navy-deep), var(--navy) 55%, var(--navy-mid)); color: #fff; }
-.why .section-heading h2 { color: #fff; }
-.why .section-heading p { color: #c5d4df; }
-.why .section-heading .eyebrow { color: var(--sky); }
-.benefit-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-.benefit { padding: 28px 24px; border: 1px solid rgba(255,255,255,.12); border-radius: var(--radius); background: rgba(255,255,255,.04); transition: .25s; }
-.benefit:hover { background: rgba(255,255,255,.08); border-color: rgba(126,218,255,.5); transform: translateY(-4px); }
-.benefit-icon { width: 52px; height: 52px; border-radius: 14px; background: rgba(24,168,224,.18); color: var(--sky); display: grid; place-items: center; font-size: 24px; margin-bottom: 18px; }
-.benefit h3 { margin-bottom: 8px; font-size: 1.08rem; }
-.benefit p { color: #c5d4df; font-size: .94rem; }
-
-/* ---------- Steps ---------- */
-.steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; position: relative; }
-.step { text-align: center; padding: 10px 24px; }
-.step-number { width: 60px; height: 60px; display: grid; place-items: center; margin: 0 auto 18px; background: var(--navy); color: var(--sky); font-weight: 800; font-size: 22px; border-radius: 50%; box-shadow: 0 0 0 6px var(--pale); }
-.step h3 { color: var(--navy); margin-bottom: 8px; }
-.step p { color: var(--muted); font-size: .96rem; }
-
-/* ---------- Enquiry ---------- */
-.enquiry { background: var(--pale); }
-.enquiry-box { display: grid; grid-template-columns: 1fr 1fr; background: #fff; border-radius: 24px; overflow: hidden; box-shadow: 0 30px 70px rgba(16,28,44,.12); }
-.enquiry-info { background: linear-gradient(150deg, var(--navy), var(--navy-mid)); color: #fff; padding: 46px 40px; }
-.enquiry-info h2 { font-size: clamp(1.7rem, 3vw, 2.3rem); line-height: 1.15; letter-spacing: -.03em; margin: 10px 0 14px; }
-.enquiry-info p { color: #d6e6f0; margin-bottom: 26px; }
-.contact-lines { display: grid; gap: 14px; }
-.contact-lines a { display: flex; align-items: center; gap: 14px; padding: 14px 16px; border: 1px solid rgba(255,255,255,.15); border-radius: 12px; transition: .2s; }
-.contact-lines a:hover { background: rgba(255,255,255,.08); border-color: var(--sky); }
-.contact-lines .ci { width: 42px; height: 42px; border-radius: 10px; background: rgba(24,168,224,.2); color: var(--sky); display: grid; place-items: center; font-size: 20px; flex: none; }
-.contact-lines small { display: block; color: #9fb6c8; font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; }
-.contact-lines strong { font-size: 1.08rem; }
-form { padding: 46px 40px; display: grid; gap: 16px; align-content: center; }
-form h3 { color: var(--navy); font-size: 1.3rem; }
-label { font-size: .85rem; font-weight: 700; color: var(--navy); display: block; margin-bottom: 6px; }
-input, select, textarea {
-  width: 100%; padding: 13px 14px; border: 1px solid #c5d4df; border-radius: 10px;
-  font: inherit; color: var(--ink); background: #fff; outline: none; transition: .2s;
+.cartlist .li .qt button:hover{background:var(--pale); border-color:var(--blue);}
+.cartlist .li .qt b{font-size:13px; min-width:14px; text-align:center;}
+.cartlist .li .pr{flex:none; font-weight:800; color:var(--navy); font-size:13.5px; white-space:nowrap;}
+.cartlist .empty{color:#93a3b6; padding:12px 0 6px; font-size:13.5px;}
+.cartcount{
+  display:inline-flex; align-items:center; justify-content:center; min-width:20px; height:20px;
+  padding:0 6px; border-radius:999px; background:var(--blue); color:#071a2a;
+  font-size:11.5px; font-weight:800; margin-left:8px; vertical-align:middle;
 }
-input:focus, select:focus, textarea:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(24,168,224,.18); }
-textarea { min-height: 100px; resize: vertical; }
-.form-note { font-size: .82rem; color: var(--muted); }
-
-/* ---------- FAQ ---------- */
-.faq-list { max-width: 820px; margin: auto; }
-details { border: 1px solid var(--line); border-radius: 12px; padding: 18px 22px; margin-bottom: 12px; background: #fff; transition: .2s; }
-details[open] { border-color: var(--blue); box-shadow: 0 10px 28px rgba(16,28,44,.07); }
-summary { cursor: pointer; font-weight: 700; color: var(--navy); list-style: none; display: flex; justify-content: space-between; gap: 16px; }
-summary::-webkit-details-marker { display: none; }
-summary::after { content: "+"; color: var(--blue-dark); font-size: 1.4rem; line-height: 1; }
-details[open] summary::after { content: "–"; }
-details p { margin-top: 12px; color: var(--muted); }
-
-/* ---------- Final CTA ---------- */
-.cta-panel { background: linear-gradient(120deg, var(--navy), var(--navy-mid)); border-radius: 28px; padding: 60px 36px; text-align: center; color: #fff; position: relative; overflow: hidden; }
-.cta-panel::after { content: ""; position: absolute; left: -100px; bottom: -140px; width: 380px; height: 380px; border-radius: 50%; background: radial-gradient(circle, rgba(24,168,224,.25), transparent 70%); }
-.cta-panel > * { position: relative; z-index: 1; }
-.cta-panel h2 { font-size: clamp(1.8rem, 4vw, 2.7rem); letter-spacing: -.03em; margin-bottom: 12px; }
-.cta-panel p { color: #d6e6f0; max-width: 620px; margin: 0 auto 26px; }
-.cta-panel .hero-cta { justify-content: center; }
-.cta-phone { margin-top: 22px; color: #c5d4df; font-size: .95rem; }
-.cta-phone a { color: #fff; font-weight: 700; font-size: 1.15rem; }
-
-/* ---------- Footer ---------- */
-footer { background: var(--navy-deep); color: #fff; padding: 56px 0 26px; }
-.footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; padding-bottom: 36px; border-bottom: 1px solid rgba(255,255,255,.1); }
-footer p, footer li, footer a { color: #c5d4df; font-size: .94rem; }
-footer h4 { font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: var(--sky); margin-bottom: 14px; }
-footer ul { list-style: none; display: grid; gap: 9px; }
-footer a:hover { color: var(--sky); }
-.footer-bottom { padding-top: 22px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; font-size: .84rem; color: #9fb6c8; }
-
-/* ---------- Floating buttons ---------- */
-.whatsapp-float {
-  position: fixed; bottom: 22px; right: 22px; z-index: 200; background: var(--wa); color: #fff;
-  border-radius: 50px; padding: 14px 22px; font-weight: 800; box-shadow: 0 10px 30px rgba(0,0,0,.28);
-  display: inline-flex; gap: 10px; align-items: center; transition: transform .2s;
+.clear-cart{
+  background:none; border:0; color:#93a3b6; font-size:11.5px; font-weight:700;
+  cursor:pointer; font-family:inherit; padding:0; text-decoration:underline;
 }
-.whatsapp-float:hover { transform: translateY(-3px); }
-.mobile-bar { display: none; }
+.clear-cart:hover{color:#c0392b;}
 
-/* ---------- Reveal ---------- */
-.reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
-.reveal.show { opacity: 1; transform: none; }
-@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+.totalrow{display:flex; justify-content:space-between; align-items:baseline; padding:16px 22px 0;
+  font-weight:800; font-size:15px; color:var(--navy);}
+.totalrow b{font-size:26px; letter-spacing:-1px;}
+.payactions{padding:16px 22px 22px; display:flex; flex-direction:column; gap:10px;}
+.payactions .btn{width:100%; border-radius:10px;}
+.btn.stripe{background:#635bff; color:#fff; font-size:15.5px; padding:16px;}
+.btn.stripe:hover{background:#4f46e5;}
+.btn.wa2{background:#fff; color:var(--navy); border:1.5px solid var(--line); font-size:14px; padding:14px;}
+.btn.wa2:hover{border-color:var(--wa); color:#128c43; background:#fff;}
+.secure{display:flex; gap:9px; align-items:flex-start; font-size:12.5px; color:var(--muted);
+  padding:0 22px 20px; line-height:1.5;}
 
-/* ---------- Responsive ---------- */
-@media (max-width: 1000px) {
-  .hero-grid, .enquiry-box { grid-template-columns: 1fr; }
-  .hero-art { max-height: none; }
-  .category-grid, .benefit-grid { grid-template-columns: repeat(2, 1fr); }
-  .trust-grid { grid-template-columns: repeat(2, 1fr); }
-  .trust-item:nth-child(2) { border-right: 0; }
-  .trust-item:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
-  .nav-links a:not(.btn) { display: none; }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
+
+/* ---------- promotions & catalogue download ---------- */
+.promo-band{background:var(--navy); color:#fff; border-top:1px solid rgba(255,255,255,.08);}
+.promo-band .section-heading h2{color:#fff;}
+.promo-band .section-heading p{color:#c5d4df;}
+.promo-band .section-heading .eyebrow{color:var(--sky);}
+.promo-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px;}
+.promo{
+  background:rgba(126,218,255,.06); border:1px solid rgba(126,218,255,.22);
+  border-left:4px solid var(--blue); border-radius:14px; padding:22px 24px;
 }
-@media (max-width: 650px) {
-  section { padding: 56px 0; }
-  .hero { padding: 34px 0 52px; }
-  .hero-art { aspect-ratio: 16 / 9; border-radius: 18px; }
-  .topbar .tb-left { display: none; }
-  .category-grid, .benefit-grid, .steps-grid, .footer-grid { grid-template-columns: 1fr; }
-  .enquiry-info, form { padding: 30px 22px; }
-  .whatsapp-float { display: none; }
-  .mobile-bar { display: grid; grid-template-columns: 1fr 1fr; position: fixed; left: 0; right: 0; bottom: 0; z-index: 300; box-shadow: 0 -6px 24px rgba(0,0,0,.25); }
-  .mobile-bar a { display: flex; gap: 8px; align-items: center; justify-content: center; padding: 15px; font-weight: 800; color: #fff; }
-  .mobile-bar .mb-call { background: var(--navy); }
-  .mobile-bar .mb-wa { background: var(--wa); }
-  body { padding-bottom: 54px; }
+.promo h3{color:#fff; font-size:1.02rem; margin-bottom:8px;}
+.promo p{color:#c5d4df; font-size:.93rem; margin:0;}
+.promo .save{
+  display:inline-block; margin-top:12px; font-size:12px; font-weight:800;
+  background:var(--blue); color:#071a2a; padding:5px 11px; border-radius:999px;
+}
+.dl-box{
+  margin-top:34px; background:rgba(9,19,33,.55); border:1px solid rgba(126,218,255,.22);
+  border-radius:18px; padding:28px 30px; display:flex; gap:26px; align-items:center; flex-wrap:wrap;
+}
+.dl-box .dl-txt{flex:1; min-width:260px;}
+.dl-box h3{color:#fff; font-size:1.15rem; margin-bottom:6px;}
+.dl-box p{color:#c5d4df; font-size:.93rem; margin:0;}
+.dl-box .btn{flex:none;}
+
+.dl-actions{display:flex; flex-direction:column; gap:10px; flex:none;}
+.dl-actions .btn{width:100%; white-space:nowrap;}
+.btn-outline{background:transparent; border:2px solid rgba(126,218,255,.55); color:var(--sky);}
+.btn-outline:hover{background:rgba(126,218,255,.12); border-color:var(--sky);}
+.dl-meta{font-size:12px; color:#8fb4cc; margin-top:10px;}
+.promo-terms{margin-top:24px; font-size:12.5px; color:#8fb4cc; line-height:1.7;}
+.promo-terms b{color:#c5d4df;}
+
+/* ---------- services / steps ---------- */
+.svc{display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:22px;}
+.steps-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:26px;}
+.step-number{width:46px; height:46px; border-radius:12px; background:var(--pale); color:var(--blue-dark);
+  display:grid; place-items:center; font-weight:800; font-size:19px; margin-bottom:16px;}
+.note{font-size:.85rem; color:var(--muted); margin-top:14px; line-height:1.6;}
+
+/* ---------- enquiry ---------- */
+.enquiry-box{display:grid; grid-template-columns:1fr 1.05fr; gap:0; border:1px solid var(--line);
+  border-radius:22px; overflow:hidden; background:#fff; box-shadow:0 20px 50px rgba(16,28,44,.08);}
+.enquiry-info{background:linear-gradient(150deg,var(--navy-deep),var(--navy) 60%,var(--navy-mid)); color:#fff; padding:44px 38px;}
+.enquiry-info h2{font-size:clamp(1.5rem,2.6vw,2rem); color:#fff; margin:10px 0 12px; line-height:1.16;}
+.enquiry-info p{color:#c5d4df; font-size:.97rem; margin-bottom:24px;}
+.contact-lines{display:flex; flex-direction:column; gap:12px;}
+.contact-lines a{display:flex; gap:13px; align-items:center; color:#fff;}
+.contact-lines a:hover .ci{background:var(--blue); color:#071a2a;}
+.ci{flex:none; width:42px; height:42px; border-radius:11px; background:rgba(126,218,255,.14);
+  color:var(--sky); display:grid; place-items:center; font-size:18px; transition:background .2s;}
+.contact-lines small{display:block; color:#96a9bd; font-size:12px;}
+.contact-lines strong{font-size:.98rem;}
+form{padding:44px 38px;}
+form h3{margin-bottom:6px; font-size:1.15rem;}
+form > div{margin-top:16px;}
+label{display:block; font-size:13px; font-weight:700; color:var(--navy); margin-bottom:6px;}
+input,select,textarea{width:100%; padding:12px 14px; border:1.5px solid var(--line); border-radius:10px;
+  font:inherit; font-size:15px; color:var(--ink); background:#fff;}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--blue); outline-offset:1px; border-color:var(--blue);}
+form .btn{width:100%; margin-top:22px;}
+.form-note{font-size:12.5px; color:var(--muted); margin-top:12px;}
+
+/* ---------- footer ---------- */
+footer{background:var(--navy-deep); color:#96a9bd; padding:52px 0 26px; font-size:.92rem;}
+.footer-grid{display:grid; grid-template-columns:1.6fr 1fr 1fr; gap:34px;}
+.footer-grid .logo{font-size:1.4rem;}
+footer h4{color:#fff; font-size:13px; letter-spacing:.1em; text-transform:uppercase; margin-bottom:14px;}
+footer ul{list-style:none;}
+footer li{padding:5px 0;}
+footer a:hover{color:var(--sky);}
+.footer-bottom{margin-top:34px; padding-top:20px; border-top:1px solid rgba(255,255,255,.1);
+  display:flex; justify-content:space-between; gap:18px; flex-wrap:wrap; font-size:12.5px; color:#63798f;}
+
+/* ---------- floating whatsapp ---------- */
+.wa-float{position:fixed; right:22px; bottom:22px; z-index:200; display:flex; align-items:center; gap:11px;
+  background:var(--wa); color:#fff; font-weight:800; font-size:16px; padding:14px 22px 14px 17px;
+  border-radius:999px; box-shadow:0 12px 30px rgba(32,191,101,.42);}
+.wa-float:hover{background:#1ba856;}
+.wa-float svg{width:26px; height:26px;}
+@media(max-width:600px){ .wa-float .wa-txt{display:none;} .wa-float{padding:15px; right:16px; bottom:16px;} }
+
+/* ---------- responsive ---------- */
+@media(max-width:1000px){
+  .hero-grid{grid-template-columns:1fr; gap:36px;}
+  .hero-art{order:-1; max-height:none;}
+  .shop{grid-template-columns:1fr;}
+  .checkoutbar{position:static;}
+  .steps-grid{grid-template-columns:1fr;}
+  .enquiry-box{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr;}
+  .trust-grid{grid-template-columns:1fr 1fr;}
+  .nav-links{display:none;}
+}
+@media(max-width:640px){
+  section{padding:56px 0;}
+  .hero{padding:30px 0 48px;}
+  .hero-art{border-radius:18px;}
+  .trust-grid{grid-template-columns:1fr;}
+  .hero-art.video-missing::after{display:none;}
 }
 </style>
 </head>
-
 <body>
 
-<!-- SVG icon library -->
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <defs>
-    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
-    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.5 8.5 0 1 1 21 11.5z"/></symbol>
-    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></symbol>
-    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
-    <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></symbol>
-    <symbol id="i-truck" viewBox="0 0 24 24"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2"/><circle cx="18.5" cy="18.5" r="2"/></symbol>
-    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
-    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></symbol>
-    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
-    <symbol id="i-wa" viewBox="0 0 24 24"><path d="M20.5 3.5A11.8 11.8 0 0 0 1.9 17.8L0 24l6.4-1.7A11.8 11.8 0 0 0 24 12a11.7 11.7 0 0 0-3.5-8.5zM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.8 1 1-3.7-.2-.4A9.8 9.8 0 1 1 12 21.8zm5.4-7.3c-.3-.1-1.7-.8-2-.9s-.5-.1-.7.1-.8.9-.9 1.1-.3.2-.6.1a8 8 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.3 3.3 0 0 0-1 2.4 5.7 5.7 0 0 0 1.2 3 13 13 0 0 0 5 4.4c1.9.8 2.6.9 3.6.7a3 3 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.1-.3-.2-.6-.3z"/></symbol>
-  </defs>
-</svg>
-
-<!-- Top bar -->
+<!-- ---------- top bar ---------- -->
 <div class="topbar">
   <div class="container">
-    <div class="tb-left">Smart devices · Robotics · Everyday innovation</div>
-    <div class="tb-right">
-      <span>International enquiries welcome</span>
-      <a href="tel:+393208670068">Call: +39 320 867 0068</a>
-    </div>
+    <div>Smart devices · Robotics · Everyday innovation</div>
+    <div>International enquiries welcome · <a href="tel:+393208670068">Call: +39 320 867 0068</a></div>
   </div>
 </div>
 
 <header>
   <div class="container navbar">
-    <a class="logo" href="#home" aria-label="SmartCol home">Smart<span>Col</span></a>
+    <a class="logo" href="#top" aria-label="SmartCol home">Smart<span>Col</span></a>
     <nav class="nav-links" aria-label="Main navigation">
       <a href="#products">Products</a>
-      <a href="#why">Why SmartCol</a>
+      <a href="#services">Services</a>
+      <a href="#offers">Offers</a>
       <a href="#how-it-works">How it works</a>
-      <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
-      <a class="btn btn-sm" href="tel:+393208670068"><svg class="i"><use href="#i-phone"/></svg> Call now</a>
+      <a class="btn btn-sm" href="tel:+393208670068">Call now</a>
     </nav>
   </div>
 </header>
 
-<main>
+<main id="top">
 
-<!-- Hero -->
-<section class="hero" id="home" style="padding-top:40px">
+<!-- ================= HERO ================= -->
+<section class="hero">
   <div class="container hero-grid">
     <div>
       <span class="eyebrow">Smart devices · Robotics · Everyday innovation</span>
       <h1>Smart technology for a <em>better everyday.</em></h1>
-      <p class="lead">Robot vacuums, window-cleaning robots, robotic lawn mowers, smart locks and connected home devices. Tell us what you need and we will recommend the right model, with availability and delivery confirmed before you buy.</p>
+      <p class="lead">
+        Robot vacuums, window-cleaning robots, robotic lawn mowers, smart locks and connected home
+        devices. Tell us what you need and we will recommend the right model, with availability and
+        delivery confirmed before you buy.
+      </p>
       <div class="hero-cta">
-        <a class="btn" href="tel:+393208670068"><svg class="i"><use href="#i-phone"/></svg> Call +39 320 867 0068</a>
-        <a class="btn btn-ghost" href="https://wa.me/393208670068?text=Hello%20SmartCol%2C%20I%27d%20like%20advice%20on%20a%20product." target="_blank" rel="noopener"><svg class="i fill"><use href="#i-wa"/></svg> WhatsApp us</a>
+        <a class="btn" href="tel:+393208670068">Call +39 320 867 0068</a>
+        <a class="btn btn-ghost" href="https://wa.me/393208670068?text=Hello%20SmartCol%2C%20I%27d%20like%20advice%20on%20a%20product." target="_blank" rel="noopener">WhatsApp us</a>
       </div>
       <div class="hero-points">
         <span>Personal advice</span>
@@ -321,166 +351,450 @@ footer a:hover { color: var(--sky); }
       </div>
     </div>
 
-    <div class="hero-art">
-      <video muted autoplay loop playsinline preload="auto" poster="images/smartcol-video-poster.jpg">
-        <source src="videos/SmartCol-expanded-smart-home-video-web.mp4" type="video/mp4">
+    <div class="hero-art" id="heroArt">
+      <video id="heroVideo" autoplay muted loop playsinline preload="auto" poster="img/banner.jpg">
+        <source src="video/smartcol-hero.mp4" type="video/mp4">
+        <source src="video/banner.mp4" type="video/mp4">
       </video>
     </div>
   </div>
 </section>
 
-<!-- Trust strip -->
+<!-- ================= TRUST ================= -->
 <div class="trust">
   <div class="container trust-grid">
-    <div class="trust-item"><div class="trust-ico"><svg class="i"><use href="#i-user"/></svg></div><div><strong>Talk to a real person</strong><small>Direct line to the founder</small></div></div>
-    <div class="trust-item"><div class="trust-ico"><svg class="i"><use href="#i-check"/></svg></div><div><strong>Right product, first time</strong><small>We check compatibility for you</small></div></div>
-    <div class="trust-item"><div class="trust-ico"><svg class="i"><use href="#i-truck"/></svg></div><div><strong>Clear delivery terms</strong><small>Confirmed before you pay</small></div></div>
-    <div class="trust-item"><div class="trust-ico"><svg class="i"><use href="#i-globe"/></svg></div><div><strong>International enquiries</strong><small>Serving markets as availability allows</small></div></div>
+    <div class="trust-item">
+      <div class="trust-ico"><svg class="i"><use href="#i-user"/></svg></div>
+      <div><strong>Talk to a real person</strong><small>Direct line to the founder</small></div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-ico"><svg class="i"><use href="#i-check"/></svg></div>
+      <div><strong>Right product, first time</strong><small>We check compatibility for you</small></div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-ico"><svg class="i"><use href="#i-shield"/></svg></div>
+      <div><strong>Secure card payment</strong><small>Handled by Stripe</small></div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-ico"><svg class="i"><use href="#i-truck"/></svg></div>
+      <div><strong>Clear delivery terms</strong><small>Confirmed before you pay</small></div>
+    </div>
   </div>
 </div>
 
-<!-- Products -->
+<!-- ================= PRODUCTS + PAYMENT ================= -->
 <section id="products">
   <div class="container">
-    <div class="section-heading reveal">
+    <div class="section-heading">
       <span class="eyebrow">Our range</span>
       <h2>Smart solutions for every part of your life</h2>
-      <p>Choose a category and message us. We reply with models, availability and delivery options.</p>
+      <p>Choose what you need, see the total in the order panel, and pay by card — or message us and we take payment directly.</p>
     </div>
 
-    <div class="filters reveal" aria-label="Category filters">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="cleaning">Cleaning</button>
-      <button class="filter-btn" data-filter="security">Security</button>
-      <button class="filter-btn" data-filter="lighting">Lighting</button>
-      <button class="filter-btn" data-filter="outdoor">Outdoor</button>
-      <button class="filter-btn" data-filter="accessories">Accessories</button>
-    </div>
+    <div class="shop">
 
-    <div class="category-grid" id="categoryGrid">
+      <div class="productlist">
 
-      <article class="category-card reveal" data-category="cleaning">
-        <div class="thumb"><img src="https://images.unsplash.com/photo-1563298723-dcfebaa392e3?auto=format&fit=crop&w=800&q=80" alt="Robot vacuum cleaner for the home" loading="lazy"><span class="tag">Popular</span></div>
-        <div class="card-content">
-          <h3>Robot Vacuum Cleaners</h3>
-          <p>Automated floor care for busy homes and workspaces, with vacuum-and-mop models available.</p>
-          <a class="card-link" href="https://wa.me/393208670068?text=Hello%20SmartCol%2C%20I%27m%20interested%20in%20robot%20vacuum%20cleaners." target="_blank" rel="noopener">Request information <svg class="i"><use href="#i-arrow"/></svg></a>
+        <article class="card">
+          <div class="shot"><span class="badge hot">Try before you buy</span>
+            <img src="img/pic-01.jpg" alt="Teendow T7S robot vacuum and mop at home" loading="lazy"></div>
+          <div class="card-body">
+            <h3>Robot Vacuum &amp; Mop — Teendow T7S</h3>
+            <p>Vacuum and mop in one compact unit, from the app or straight from the buttons.</p>
+            <ul class="spec">
+              <li>Type <b>2-in-1</b></li>
+              <li>Control <b>App / manual</b></li>
+              <li>Floor <b>Hard &amp; low-pile</b></li>
+            </ul>
+            <p class="price"><span class="cur">€</span><span class="amount">100</span><span class="note">You are welcome to test it first</span></p>
+            <div class="row">
+              <button class="btn" data-buy="t7s">Add to order</button>
+              <a class="btn btn-ghost" style="color:var(--navy);border-color:var(--line)" href="https://wa.me/393208670068?text=Hello%20SmartCol%2C%20a%20question%20about%20the%20Teendow%20T7S.">Ask</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="shot"><span class="badge">Cleaning</span>
+            <img src="img/pic-03.jpg" alt="Window-cleaning robot with water jet and safety rope" loading="lazy"></div>
+          <div class="card-body">
+            <h3>Window-Cleaning Robot — 2800Pa</h3>
+            <p>Sticks itself to the glass and cleans it for you. Windows and shower screens.</p>
+            <ul class="spec">
+              <li>Suction <b>2800Pa</b></li>
+              <li>Body <b>62mm · 980g</b></li>
+              <li>Safety <b>UPS + rope</b></li>
+            </ul>
+            <p class="price"><span class="cur">€</span><span class="amount">86,67</span><span class="note">Imported on request — lead time confirmed first</span></p>
+            <div class="row">
+              <button class="btn" data-buy="win">Add to order</button>
+              <a class="btn btn-ghost" style="color:var(--navy);border-color:var(--line)" href="https://wa.me/393208670068?text=Hello%20SmartCol%2C%20a%20question%20about%20the%20window-cleaning%20robot.">Ask</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="shot"><span class="badge hot">In stock</span>
+            <img src="img/pic-02.jpg" alt="Smart fingerprint padlock" loading="lazy"></div>
+          <div class="card-body">
+            <h3>Smart Fingerprint Padlock</h3>
+            <p>No keys, no combination — touch the sensor and it opens. Charges over USB.</p>
+            <ul class="spec">
+              <li>Unlock <b>Fingerprint</b></li>
+              <li>Power <b>USB</b></li>
+              <li>Rating <b>Waterproof</b></li>
+            </ul>
+            <p class="price"><span class="cur">€</span><span class="amount">25</span><span class="note">In stock — you are welcome to test it</span></p>
+            <div class="row">
+              <button class="btn" data-buy="lock">Add to order</button>
+              <a class="btn btn-ghost" style="color:var(--navy);border-color:var(--line)" href="https://wa.me/393208670068?text=Hello%20SmartCol%2C%20a%20question%20about%20the%20padlock.">Ask</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="shot"><span class="badge">Security</span>
+            <img src="img/pic-04.jpg" alt="Tuya wifi video doorbell with camera" loading="lazy"></div>
+          <div class="card-body">
+            <h3>WiFi Video Doorbell — Tuya</h3>
+            <p>See and speak to whoever is at the door, from your phone, wherever you are.</p>
+            <ul class="spec">
+              <li>App <b>Tuya video</b></li>
+              <li>Link <b>Wireless WiFi</b></li>
+              <li>Setup help <b>Available</b></li>
+            </ul>
+            <p class="price"><span class="cur">€</span><span class="amount">59,69</span><span class="note">In stock — installation help available</span></p>
+            <div class="row">
+              <button class="btn" data-buy="door">Add to order</button>
+              <a class="btn btn-ghost" style="color:var(--navy);border-color:var(--line)" href="https://wa.me/393208670068?text=Hello%20SmartCol%2C%20a%20question%20about%20the%20video%20doorbell.">Ask</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="shot"><span class="badge">Heating</span>
+            <img src="img/pic-05.jpg" alt="HE-132 portable room heater, 1200W" loading="lazy"></div>
+          <div class="card-body">
+            <h3>Portable Home Heater — HE-132</h3>
+            <p>Warms up fast. Desk, bedside, office or workshop.</p>
+            <ul class="spec">
+              <li>Power <b>1200W</b></li>
+              <li>Safety <b>Overheat + tip-over</b></li>
+              <li>Control <b>Thermostat</b></li>
+            </ul>
+            <p class="price"><span class="cur">€</span><span class="amount">50</span><span class="note">You are welcome to test it first</span></p>
+            <div class="row">
+              <button class="btn" data-buy="he132">Add to order</button>
+              <a class="btn btn-ghost" style="color:var(--navy);border-color:var(--line)" href="https://wa.me/393208670068?text=Hello%20SmartCol%2C%20a%20question%20about%20the%20HE-132.">Ask</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="shot"><span class="badge">Heating</span>
+            <img src="img/pic-06.jpg" alt="800W plug-in wall heater with timer" loading="lazy"></div>
+          <div class="card-body">
+            <h3>Plug-In Wall Heater — 800W</h3>
+            <p>Into the wall socket. No cable on the floor, no floor space taken.</p>
+            <ul class="spec">
+              <li>Power <b>800W · EU</b></li>
+              <li>Warm-up <b>~2 seconds</b></li>
+              <li>Timer <b>1–2 hours</b></li>
+            </ul>
+            <p class="price"><span class="cur">€</span><span class="amount">45</span><span class="note">You are welcome to test it first</span></p>
+            <div class="row">
+              <button class="btn" data-buy="wall800">Add to order</button>
+              <a class="btn btn-ghost" style="color:var(--navy);border-color:var(--line)" href="https://wa.me/393208670068?text=Hello%20SmartCol%2C%20a%20question%20about%20the%20800W%20wall%20heater.">Ask</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="shot"><span class="badge">Mobility</span>
+            <img src="img/pic-07.jpg" alt="KOOLUX X16 folding electric bike" loading="lazy"></div>
+          <div class="card-body">
+            <h3>KOOLUX X16 Folding E-Bike</h3>
+            <p>Folding e-bike for commuting and weekends. EU stock, certified.</p>
+            <ul class="spec">
+              <li>Motor <b>500W · 25km/h</b></li>
+              <li>Battery <b>48V 18Ah</b></li>
+              <li>Range <b>60–100km</b></li>
+            </ul>
+            <p class="price"><span class="cur">€</span><span class="amount">999</span><span class="note">EU stock — arrives in 2–7 days</span></p>
+            <div class="row">
+              <button class="btn" data-buy="x16">Add to order</button>
+              <a class="btn btn-ghost" style="color:var(--navy);border-color:var(--line)" href="https://wa.me/393208670068?text=Hello%20SmartCol%2C%20a%20question%20about%20the%20KOOLUX%20X16.">Ask</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="shot"><span class="badge" style="background:var(--wa);color:#fff">Rent</span>
+            <img src="img/pic-08.jpg" alt="Folding e-bike to rent in Rome" loading="lazy"></div>
+          <div class="card-body">
+            <h3>Rent an E-Bike in Rome</h3>
+            <p>The same folding e-bike, by the day, week or month. Helmet, charger and lock included.</p>
+            <ul class="spec">
+              <li>Day <b>€15</b></li>
+              <li>Week <b>€70</b></li>
+              <li>Month <b>€180</b></li>
+            </ul>
+            <p class="price rental"><span class="cur">from €</span><span class="amount">15</span><span class="note">per day · week €70 · month €180 · refundable deposit</span></p>
+            <div class="row">
+              <button class="btn" data-buy="ebike">Add to order</button>
+              <a class="btn btn-ghost" style="color:var(--navy);border-color:var(--line)" href="https://wa.me/393208670068?text=Hello%20SmartCol%2C%20I%27d%20like%20to%20rent%20an%20e-bike%20in%20Rome.%20Dates%3A%20">Book</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="shot"><span class="badge">On request</span>
+            <img src="img/pic-01.jpg" alt="Smart home devices available to order" loading="lazy"></div>
+          <div class="card-body">
+            <h3>Lawn Mowers, Lighting &amp; Plugs</h3>
+            <p>Robotic lawn mowers, smart lighting, plugs and sensors — sourced to order.</p>
+            <ul class="spec">
+              <li>We check <b>Voltage, plug, app</b></li>
+              <li>Bulk / OEM <b>Welcome</b></li>
+            </ul>
+            <p class="price soft"><span class="amount">Price on request</span><span class="note">We source to order — quote before you commit</span></p>
+            <div class="row">
+              <a class="btn" href="https://wa.me/393208670068?text=Hello%20SmartCol%2C%20I%27d%20like%20a%20quote.">Request a quote</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- ---------- order + payment ---------- -->
+      <aside class="checkoutbar" id="checkout">
+        <div class="head">
+          <h3>Your order <span class="cartcount" id="cartCount">0</span></h3>
+          <p>Card payment, or message us to pay directly</p>
         </div>
-      </article>
 
-      <article class="category-card reveal" data-category="cleaning">
-        <div class="thumb"><img src="https://images.unsplash.com/photo-1558317374-067fb5f30001?auto=format&fit=crop&w=800&q=80" alt="Window-cleaning robot" loading="lazy"></div>
-        <div class="card-content">
-          <h3>Window-Cleaning Robots</h3>
-          <p>Purpose-built devices for glass and hard-to-reach surfaces, with safety features to compare.</p>
-          <a class="card-link" href="https://wa.me/393208670068?text=Hello%20SmartCol%2C%20I%27m%20interested%20in%20window-cleaning%20robots." target="_blank" rel="noopener">Request information <svg class="i"><use href="#i-arrow"/></svg></a>
+        <div class="thumbs" id="thumbs">
+          <div class="t" data-add="t7s" title="Robot vacuum — €100"><img src="img/pic-01.jpg" alt="Robot vacuum"></div>
+          <div class="t" data-add="win" title="Window robot — €86,67"><img src="img/pic-03.jpg" alt="Window robot"></div>
+          <div class="t" data-add="lock" title="Padlock — €25"><img src="img/pic-02.jpg" alt="Padlock"></div>
+          <div class="t" data-add="door" title="Doorbell — €59,69"><img src="img/pic-04.jpg" alt="Doorbell"></div>
+          <div class="t" data-add="he132" title="Heater — €50"><img src="img/pic-05.jpg" alt="Heater"></div>
+          <div class="t" data-add="wall800" title="Wall heater — €45"><img src="img/pic-06.jpg" alt="Wall heater"></div>
+          <div class="t" data-add="x16" title="E-bike — €999"><img src="img/pic-07.jpg" alt="E-bike"></div>
+          <div class="t" data-add="ebike" title="E-bike rental — from €15"><img src="img/pic-08.jpg" alt="E-bike rental"></div>
         </div>
-      </article>
+        <p class="paylabel">Tap a picture to add it</p>
 
-      <article class="category-card reveal" data-category="security">
-        <div class="thumb"><img src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=800&q=80" alt="Smart lock and access devices" loading="lazy"></div>
-        <div class="card-content">
-          <h3>Smart Locks & Padlocks</h3>
-          <p>Connected access solutions for added convenience and control over who comes in.</p>
-          <a class="card-link" href="https://wa.me/393208670068?text=Hello%20SmartCol%2C%20I%27m%20interested%20in%20smart%20locks." target="_blank" rel="noopener">Request information <svg class="i"><use href="#i-arrow"/></svg></a>
+        <button class="cart-toggle" type="button" id="cartToggle" aria-expanded="false">
+          <span>Items <span class="arw">▼</span></span>
+          <span class="clear-cart" id="clearCart">Clear</span>
+        </button>
+        <div class="cartlist" id="cartList">
+          <div class="empty">Nothing added yet.</div>
         </div>
-      </article>
 
-      <article class="category-card reveal" data-category="lighting">
-        <div class="thumb"><img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80" alt="Smart lighting in a modern room" loading="lazy"></div>
-        <div class="card-content">
-          <h3>Smart Lighting</h3>
-          <p>Create the right atmosphere with connected lighting and simple controls.</p>
-          <a class="card-link" href="https://wa.me/393208670068?text=Hello%20SmartCol%2C%20I%27m%20interested%20in%20smart%20lighting." target="_blank" rel="noopener">Request information <svg class="i"><use href="#i-arrow"/></svg></a>
+        <div class="totalrow"><span>Total</span><b id="cartTotal">€0,00</b></div>
+
+        <div class="payactions">
+          <button class="btn stripe" id="payBtn" onclick="checkout()">Pay securely with Stripe</button>
+          <a class="btn wa2" id="waOrder" href="https://wa.me/393208670068" target="_blank" rel="noopener">Send order on WhatsApp</a>
         </div>
-      </article>
 
-      <article class="category-card reveal" data-category="outdoor">
-        <div class="thumb"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80" alt="Garden suitable for a robotic lawn mower" loading="lazy"></div>
-        <div class="card-content">
-          <h3>Robotic Lawn Mowers</h3>
-          <p>Less routine maintenance for suitable gardens. Tell us your garden size and slope.</p>
-          <a class="card-link" href="https://wa.me/393208670068?text=Hello%20SmartCol%2C%20I%27m%20interested%20in%20robotic%20lawn%20mowers." target="_blank" rel="noopener">Request information <svg class="i"><use href="#i-arrow"/></svg></a>
-        </div>
-      </article>
+        <p class="secure">
+          <svg class="i" style="width:15px;height:15px;flex:none;margin-top:2px"><use href="#i-shield"/></svg>
+          Payments handled by Stripe. Your card details never touch this site.
+        </p>
+      </aside>
 
-      <article class="category-card reveal" data-category="security">
-        <div class="thumb"><img src="https://images.unsplash.com/photo-1558008258-3256797b43f3?auto=format&fit=crop&w=800&q=80" alt="Smart security camera" loading="lazy"></div>
-        <div class="card-content">
-          <h3>Cameras & Video Doorbells</h3>
-          <p>Devices designed to help you monitor your home, with app support and privacy features.</p>
-          <a class="card-link" href="https://wa.me/393208670068?text=Hello%20SmartCol%2C%20I%27m%20interested%20in%20smart%20security." target="_blank" rel="noopener">Request information <svg class="i"><use href="#i-arrow"/></svg></a>
-        </div>
-      </article>
-
-      <article class="category-card reveal" data-category="accessories">
-        <div class="thumb"><img src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=800&q=80" alt="Connected plugs and sensors" loading="lazy"></div>
-        <div class="card-content">
-          <h3>Smart Plugs & Sensors</h3>
-          <p>Small connected products that make everyday routines easier and more efficient.</p>
-          <a class="card-link" href="https://wa.me/393208670068?text=Hello%20SmartCol%2C%20I%27m%20interested%20in%20smart%20plugs%20and%20sensors." target="_blank" rel="noopener">Request information <svg class="i"><use href="#i-arrow"/></svg></a>
-        </div>
-      </article>
-
-      <article class="category-card reveal" data-category="accessories">
-        <div class="thumb"><img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=800&q=80" alt="Modern smart home interior" loading="lazy"><span class="tag">New</span></div>
-        <div class="card-content">
-          <h3>New Arrivals</h3>
-          <p>Ask about our latest products, or suggest a device you would like us to source.</p>
-          <a class="card-link" href="https://wa.me/393208670068?text=Hello%20SmartCol%2C%20please%20tell%20me%20about%20your%20new%20arrivals." target="_blank" rel="noopener">Ask about new products <svg class="i"><use href="#i-arrow"/></svg></a>
-        </div>
-      </article>
-
-      <p class="no-results" id="noResults">No categories match your search.</p>
     </div>
   </div>
 </section>
 
-<!-- Why SmartCol -->
-<section class="why" id="why">
+
+<!-- ================= PROMOTIONS ================= -->
+<section id="offers" class="promo-band">
   <div class="container">
-    <div class="section-heading reveal">
-      <span class="eyebrow">The SmartCol difference</span>
-      <h2>Technology without the complexity</h2>
-      <p>Buying smart devices should feel simple. We handle the details so you can choose with confidence.</p>
+    <div class="section-heading">
+      <span class="eyebrow">Running now</span>
+      <h2>Promotions</h2>
+      <p>Offers we can actually honour. When one ends we take it off this page rather than leave it standing.</p>
     </div>
-    <div class="benefit-grid">
-      <div class="benefit reveal"><div class="benefit-icon"><svg class="i"><use href="#i-user"/></svg></div><h3>Personal advice</h3><p>Speak directly with us. Tell us how you will use the device and we will suggest what fits.</p></div>
-      <div class="benefit reveal"><div class="benefit-icon"><svg class="i"><use href="#i-shield"/></svg></div><h3>Checked before you buy</h3><p>We confirm specifications, accessories, voltage, plug type and app compatibility.</p></div>
-      <div class="benefit reveal"><div class="benefit-icon"><svg class="i"><use href="#i-truck"/></svg></div><h3>Clear delivery</h3><p>Availability, price and delivery terms are confirmed with you before any purchase.</p></div>
-      <div class="benefit reveal"><div class="benefit-icon"><svg class="i"><use href="#i-globe"/></svg></div><h3>International enquiries</h3><p>Based in Italy and open to enquiries from other countries, as availability allows.</p></div>
+
+    <div class="promo-grid">
+      <div class="promo">
+        <h3>Free delivery inside Rome</h3>
+        <p>On any order delivered within the city of Rome, we cover the delivery — on the robot vacuum,
+           the window-cleaning robot, both heaters, the padlock and the video doorbell.</p>
+        <span class="save">Save the delivery cost</span>
+      </div>
+      <div class="promo">
+        <h3>Test before you pay</h3>
+        <p>On the items marked in the catalogue you can try the device before committing. If it is not
+           right for your home, you do not buy it.</p>
+      </div>
+      <div class="promo">
+        <h3>E-bike hire — seventh day free</h3>
+        <p>Hire one of our folding e-bikes for a full week and the seventh day costs nothing.
+           Helmet, charger and lock included as always.</p>
+        <span class="save">A day free</span>
+      </div>
+      <div class="promo">
+        <h3>Bundle two or more devices</h3>
+        <p>Buy any two items from the catalogue in one order and we agree a reduced total with you.
+           Just say so when you write.</p>
+      </div>
+      <div class="promo">
+        <h3>Refer a friend</h3>
+        <p>Send us someone who buys and you get a credit on your next order from SmartCol.</p>
+      </div>
+      <div class="promo">
+        <h3>Ask for a quote on anything else</h3>
+        <p>Robot lawn mowers, smart lighting, plugs and sensors are sourced to order. We check voltage,
+           plug type and app compatibility before quoting.</p>
+        <span class="save">Price before you commit</span>
+      </div>
+    </div>
+
+    <!-- ---------- catalogue download ---------- -->
+    <div class="dl-box" id="catalogue">
+      <div class="dl-txt">
+        <h3>Download the full catalogue</h3>
+        <p>Every product with its photograph, specifications, price and delivery terms — 13 pages, A4,
+           ready to print or forward to whoever else needs to decide.</p>
+        <p class="dl-meta">PDF · 13 pages · A4 · 2026 edition, updated 12 November 2026</p>
+      </div>
+      <div class="dl-actions">
+        <a class="btn" href="SmartCol-Catalogue-2026.pdf" download>
+          Download the catalogue (PDF)
+        </a>
+      </div>
+    </div>
+
+    <p class="promo-terms">
+      <b>Terms of the offers.</b> Opening offer, launched 12 November 2026, valid while stock lasts.
+      Offers cannot be combined unless we say so in writing. Prices are those confirmed in writing
+      before you pay. We confirm availability and lead time before anything ships, and delivery is
+      agreed with you first — imported items carry a lead time we tell you in advance. Warranty
+      terms depend on the item and the brand, and we give you the exact terms before purchase.
+    </p>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section id="services" style="background:#f8fbfd;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow">Beyond products</span>
+      <h2>Three services people ask us for most</h2>
+      <p>All arranged by phone or WhatsApp. Tell us what is broken, or when you need the bike or the car.</p>
+    </div>
+    <div class="svc">
+
+      <article class="card">
+        <div class="card-body">
+          <h3>Find someone who repairs and fixes things at home</h3>
+          <p>Looking for a trusted person to repair something at home, or to fix your car? Tell us the problem and we will connect you with someone suitable.</p>
+          <ul class="spec">
+            <li>Home repairs <b>Available</b></li>
+            <li>Appliance faults <b>Available</b></li>
+            <li>Car repair <b>Mechanic referral</b></li>
+            <li>Area <b>Rome and around</b></li>
+          </ul>
+          <p class="price soft"><span class="cur">From €</span><span class="amount">30</span><span class="note">Depends on the job — agreed with the person who does it</span></p>
+          <div class="row">
+            <a class="btn" href="https://wa.me/393208670068?text=Hello%20SmartCol%2C%20I%20need%20someone%20to%20repair%20something.">Describe what needs fixing</a>
+          </div>
+          <p class="note">We introduce people, we do not carry out the work ourselves. You agree the job and the price directly with whoever does it.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-body">
+          <h3>Rent an e-bike in Rome</h3>
+          <p>The folding e-bike from our own stock, by the day, the week or the month. City centre, the Appian Way or the river paths.</p>
+          <ul class="spec">
+            <li>Day <b>€15</b></li>
+            <li>Week <b>€70</b></li>
+            <li>Month <b>€180</b></li>
+            <li>Included <b>Helmet, charger, lock</b></li>
+          </ul>
+          <p class="price rental"><span class="cur">from €</span><span class="amount">15</span><span class="note">per day · refundable deposit · ID required</span></p>
+          <div class="row">
+            <a class="btn" href="https://wa.me/393208670068?text=Hello%20SmartCol%2C%20I%27d%20like%20to%20rent%20an%20e-bike.%20Dates%3A%20">Check availability</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-body">
+          <h3>Rent a car in Rome</h3>
+          <p>Cars for a day, a week or a month in Rome. Airport pick-up can be arranged. Rates depend on the car and the season.</p>
+          <ul class="spec">
+            <li>Pick-up <b>Rome or airport</b></li>
+            <li>Hire <b>Daily / weekly / monthly</b></li>
+            <li>Rate <b>Confirmed before you book</b></li>
+            <li>Checks <b>Driver requirements first</b></li>
+          </ul>
+          <p class="price soft"><span class="amount">On request</span><span class="note">Rate confirmed before you book</span></p>
+          <div class="row">
+            <a class="btn" href="https://wa.me/393208670068?text=Hello%20SmartCol%2C%20I%27d%20like%20to%20rent%20a%20car%20in%20Rome.%20Dates%3A%20">Check availability</a>
+          </div>
+        </div>
+      </article>
+
     </div>
   </div>
 </section>
 
-<!-- How it works -->
+<!-- ================= HOW IT WORKS ================= -->
 <section id="how-it-works">
   <div class="container">
-    <div class="section-heading reveal">
+    <div class="section-heading">
       <span class="eyebrow">Simple and convenient</span>
       <h2>From question to delivery in three steps</h2>
       <p>No complicated forms and no pressure.</p>
     </div>
     <div class="steps-grid">
-      <div class="step reveal"><div class="step-number">1</div><h3>Tell us what you need</h3><p>Call or message us on WhatsApp with the product or the problem you want to solve.</p></div>
-      <div class="step reveal"><div class="step-number">2</div><h3>Get a clear recommendation</h3><p>We suggest suitable models and confirm specifications, price and availability.</p></div>
-      <div class="step reveal"><div class="step-number">3</div><h3>Choose and receive</h3><p>Decide at your own pace. We agree delivery terms with you before you pay.</p></div>
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>Tell us what you need</h3>
+        <p>Call or message us with the product, the fault, or your travel dates.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>Get a clear recommendation</h3>
+        <p>We confirm model, price, availability and lead time — in writing.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>Pay and receive</h3>
+        <p>Card or direct, whichever suits you. Terms agreed before anything ships.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Enquiry -->
-<section class="enquiry" id="contact">
+<!-- ================= CONTACT ================= -->
+<section id="contact" style="padding-top:0">
   <div class="container">
-    <div class="enquiry-box reveal">
+    <div class="enquiry-box">
       <div class="enquiry-info">
         <span class="eyebrow">Get in touch</span>
         <h2>Let's find the right device for you.</h2>
         <p>Call or message us. You will talk directly to the person who can answer your questions.</p>
         <div class="contact-lines">
-          <a href="tel:+393208670068"><span class="ci"><svg class="i"><use href="#i-phone"/></svg></span><span><small>Call us</small><strong>+39 320 867 0068</strong></span></a>
-          <a href="https://wa.me/393208670068" target="_blank" rel="noopener"><span class="ci"><svg class="i fill"><use href="#i-wa"/></svg></span><span><small>WhatsApp</small><strong>Chat with SmartCol</strong></span></a>
-          <a href="#faq"><span class="ci"><svg class="i"><use href="#i-globe"/></svg></span><span><small>International</small><strong>Enquiries welcome</strong></span></a>
+          <a href="tel:+393208670068">
+            <span class="ci"><svg class="i"><use href="#i-phone"/></svg></span>
+            <span><small>Call us</small><strong>+39 320 867 0068</strong></span>
+          </a>
+          <a href="https://wa.me/393208670068" target="_blank" rel="noopener">
+            <span class="ci"><svg class="i fill"><use href="#i-wa"/></svg></span>
+            <span><small>WhatsApp</small><strong>Chat with SmartCol</strong></span>
+          </a>
+          <a href="mailto:jbonil2019@gmail.com">
+            <span class="ci"><svg class="i"><use href="#i-globe"/></svg></span>
+            <span><small>Email</small><strong>jbonil2019@gmail.com</strong></span>
+          </a>
         </div>
       </div>
 
@@ -493,74 +807,31 @@ footer a:hover { color: var(--sky); }
         <div>
           <label for="interest">I am interested in</label>
           <select id="interest" name="interest">
-            <option>Robot vacuum cleaner</option>
-            <option>Window-cleaning robot</option>
-            <option>Robotic lawn mower</option>
-            <option>Smart lock or padlock</option>
-            <option>Smart camera or video doorbell</option>
-            <option>Smart lighting</option>
-            <option>Smart plugs and sensors</option>
+            <option>Robot vacuum &amp; mop — €100</option>
+            <option>Window-cleaning robot — €86,67</option>
+            <option>Smart fingerprint padlock — €25</option>
+            <option>WiFi video doorbell — €59,69</option>
+            <option>Portable heater HE-132 — €50</option>
+            <option>Plug-in wall heater — €45</option>
+            <option>KOOLUX X16 e-bike — €999</option>
+            <option>E-bike rental in Rome — from €15/day</option>
+            <option>Car rental in Rome</option>
+            <option>Home repair — find someone to fix something</option>
+            <option>Car repair — find a mechanic</option>
             <option>Something else</option>
           </select>
         </div>
         <div>
           <label for="country">Country / city</label>
-          <input id="country" name="country" type="text" placeholder="Where should we deliver?">
+          <input id="country" name="country" type="text" placeholder="Rome, Italy">
         </div>
         <div>
           <label for="message">Message (optional)</label>
-          <textarea id="message" name="message" placeholder="Tell us what you want to make easier at home or at work."></textarea>
+          <textarea id="message" name="message" placeholder="Model, dates, what needs fixing…"></textarea>
         </div>
         <button class="btn btn-wa" type="submit"><svg class="i fill"><use href="#i-wa"/></svg> Send on WhatsApp</button>
         <p class="form-note">The form opens WhatsApp with your message ready to send. We reply personally.</p>
       </form>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section id="faq">
-  <div class="container">
-    <div class="section-heading reveal">
-      <span class="eyebrow">Need help?</span>
-      <h2>Frequently asked questions</h2>
-    </div>
-    <div class="faq-list reveal">
-      <details>
-        <summary>How can I find out if a product is available?</summary>
-        <p>Call or message us on WhatsApp with the product you are interested in. We confirm current availability and delivery options.</p>
-      </details>
-      <details>
-        <summary>Can you help me choose the right device?</summary>
-        <p>Yes. Tell us what you need and how you plan to use the device, and we will recommend suitable options and check compatibility.</p>
-      </details>
-      <details>
-        <summary>Do you take international enquiries?</summary>
-        <p>Yes. We welcome enquiries from other countries. Tell us where you are and we will confirm what we can deliver.</p>
-      </details>
-      <details>
-        <summary>What about prices, warranty and delivery terms?</summary>
-        <p>These depend on the model and destination. We confirm price, warranty and delivery terms with you before you buy.</p>
-      </details>
-      <details>
-        <summary>Can I buy directly through this website?</summary>
-        <p>Not yet. This is a product-discovery site: contact us by phone or WhatsApp and we will guide you through the purchase.</p>
-      </details>
-    </div>
-  </div>
-</section>
-
-<!-- Final CTA -->
-<section style="padding-top:0">
-  <div class="container">
-    <div class="cta-panel reveal">
-      <h2>Ready to make your life smarter?</h2>
-      <p>Tell us what you are looking for. We will answer your questions and suggest the right product.</p>
-      <div class="hero-cta">
-        <a class="btn" href="tel:+393208670068"><svg class="i"><use href="#i-phone"/></svg> Call now</a>
-        <a class="btn btn-wa" href="https://wa.me/393208670068?text=Hello%20SmartCol%2C%20I%27d%20like%20to%20know%20more%20about%20your%20products." target="_blank" rel="noopener"><svg class="i fill"><use href="#i-wa"/></svg> Chat on WhatsApp</a>
-      </div>
-      <p class="cta-phone">Phone / WhatsApp: <a href="tel:+393208670068">+39 320 867 0068</a></p>
     </div>
   </div>
 </section>
@@ -571,16 +842,21 @@ footer a:hover { color: var(--sky); }
   <div class="container">
     <div class="footer-grid">
       <div>
-        <a class="logo" href="#home">Smart<span>Col</span></a>
-        <p style="margin-top:12px;max-width:320px">Smart solutions for everyday life. Practical robots and connected devices for homes, workspaces and everyday life.</p>
+        <a class="logo" href="#top">Smart<span>Col</span></a>
+        <p style="margin-top:12px;max-width:330px">
+          Smart solutions for everyday life. Practical robots and connected devices, e-bike and car rental,
+          plus home-repair introductions in Rome.
+        </p>
       </div>
       <div>
         <h4>Explore</h4>
         <ul>
           <li><a href="#products">Products</a></li>
-          <li><a href="#why">Why SmartCol</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#offers">Offers</a></li>
+          <li><a href="#catalogue">Catalogue (PDF)</a></li>
           <li><a href="#how-it-works">How it works</a></li>
-          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
       <div>
@@ -588,66 +864,215 @@ footer a:hover { color: var(--sky); }
         <ul>
           <li><a href="tel:+393208670068">+39 320 867 0068</a></li>
           <li><a href="https://wa.me/393208670068" target="_blank" rel="noopener">WhatsApp</a></li>
-          <!-- Add your email and domain here once ready:
-          <li><a href="mailto:info@yourdomain.com">info@yourdomain.com</a></li> -->
-          <li>International enquiries welcome</li>
+          <li><a href="mailto:jbonil2019@gmail.com">jbonil2019@gmail.com</a></li>
+          <li>Rome, Italy</li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© <span id="year"></span> SmartCol. All rights reserved.</span>
+      <span>© <span id="year"></span> SmartCol · Bonilla Javier · Rome, Italy.</span>
       <span>Prices, availability and delivery terms are confirmed before purchase.</span>
     </div>
   </div>
 </footer>
 
-<a class="whatsapp-float" href="https://wa.me/393208670068" target="_blank" rel="noopener" aria-label="Contact SmartCol on WhatsApp">
-  <svg class="i fill"><use href="#i-wa"/></svg> WhatsApp
+<!-- ===== floating WhatsApp ===== -->
+<a class="wa-float" href="https://wa.me/393208670068?text=Hello%20SmartCol%2C%20I%27d%20like%20to%20ask%20about%20a%20product."
+   target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg class="i fill"><use href="#i-wa"/></svg><span class="wa-txt">WhatsApp</span>
 </a>
 
-<div class="mobile-bar">
-  <a class="mb-call" href="tel:+393208670068"><svg class="i"><use href="#i-phone"/></svg> Call</a>
-  <a class="mb-wa" href="https://wa.me/393208670068" target="_blank" rel="noopener"><svg class="i fill"><use href="#i-wa"/></svg> WhatsApp</a>
-</div>
+<!-- ===== SVG icon library ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2"/><circle cx="18.5" cy="18.5" r="2"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path d="M20.5 3.5A11.8 11.8 0 0 0 1.9 17.8L0 24l6.4-1.7A11.8 11.8 0 0 0 24 12a11.7 11.7 0 0 0-3.5-8.5zM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.8 1 1-3.7-.2-.4A9.8 9.8 0 1 1 12 21.8zm5.4-7.3c-.3-.1-1.7-.8-2-.9s-.5-.1-.7.1-.8.9-.9 1.1-.3.2-.6.1a8 8 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.3 3.3 0 0 0-1 2.4 5.7 5.7 0 0 0 1.2 3 13 13 0 0 0 5 4.4c1.9.8 2.6.9 3.6.7a3 3 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.1-.3-.2-.6-.3z"/></symbol>
+  </defs>
+</svg>
 
 <script>
-const cards = [...document.querySelectorAll(".category-card")];
-const filterButtons = [...document.querySelectorAll(".filter-btn")];
-const noResults = document.getElementById("noResults");
+/* ============================================================
+   SmartCol — catalogue, order panel, checkout
+   ============================================================ */
 
-filterButtons.forEach(button => {
-  button.addEventListener("click", () => {
-    filterButtons.forEach(b => b.classList.remove("active"));
-    button.classList.add("active");
-    const f = button.dataset.filter;
-    let visible = 0;
-    cards.forEach(card => {
-      const show = f === "all" || card.dataset.category === f;
-      card.style.display = show ? "" : "none";
-      if (show) visible++;
-    });
-    noResults.style.display = visible ? "none" : "block";
+/* ---- 1. STRIPE PAYMENT LINK — paste yours between the quotes ---- */
+const STRIPE_PAYMENT_LINK = '';
+
+/* ---- 2. STRIPE PUBLISHABLE KEY (only needed with a checkout server) ---- */
+const STRIPE_PK = 'pk_test_REPLACE_ME';
+
+/* ---- 3. CHECKOUT SERVER URL (optional) ---- */
+const CHECKOUT_ENDPOINT = '';
+
+const WA = '393208670068';
+
+/* Prices in cents, EUR. */
+const CATALOGUE = {
+  t7s:     { name: 'Robot Vacuum & Mop — Teendow T7S', price: 10000 },
+  win:     { name: 'Window-Cleaning Robot — 2800Pa',   price: 8667  },
+  lock:    { name: 'Smart Fingerprint Padlock',        price: 2500  },
+  door:    { name: 'WiFi Video Doorbell — Tuya',       price: 5969  },
+  he132:   { name: 'Portable Home Heater — HE-132',    price: 5000  },
+  wall800: { name: 'Plug-In Wall Heater — 800W',       price: 4500  },
+  x16:     { name: 'KOOLUX X16 Folding E-Bike',        price: 99900 },
+  ebike:   { name: 'E-Bike Rental — 1 day (Rome)',     price: 1500  }
+};
+
+const cart = {};
+
+/* ---------- hero video: if the file is absent, say so instead of showing a black box ---------- */
+(function(){
+  const v = document.getElementById('heroVideo');
+  const art = document.getElementById('heroArt');
+  if (!v) return;
+  v.addEventListener('error', () => art.classList.add('video-missing'));
+  const s = v.querySelector('source');
+  if (s) s.addEventListener('error', () => {
+    // the second <source> may still work; only flag if no source loaded
+    if (v.readyState === 0) art.classList.add('video-missing');
   });
-});
+  v.play().catch(() => {});
+})();
 
-document.getElementById("enquiryForm").addEventListener("submit", e => {
+/* ---------- money ---------- */
+function euro(c){ return '€' + (c/100).toFixed(2).replace('.', ','); }
+
+/* ---------- cart ---------- */
+function addToCart(id){
+  if (!CATALOGUE[id]) return;
+  cart[id] = (cart[id] || 0) + 1;
+  render();
+}
+
+function render(){
+  const list  = document.getElementById('cartList');
+  const ids   = Object.keys(cart);
+  const count = ids.reduce(function(n,id){ return n + cart[id]; }, 0);
+  const total = ids.reduce(function(s,id){ return s + CATALOGUE[id].price * cart[id]; }, 0);
+
+  document.getElementById('cartCount').textContent = count;
+
+  list.innerHTML = ids.length
+    ? ids.map(function(id){
+        const it = CATALOGUE[id], q = cart[id];
+        return '<div class="li">' +
+                 '<span class="nm">' + it.name +
+                   (q > 1 ? '<small>' + euro(it.price) + ' each</small>' : '') +
+                 '</span>' +
+                 '<span class="qt">' +
+                   '<button type="button" data-minus="' + id + '" aria-label="Remove one">−</button>' +
+                   '<b>' + q + '</b>' +
+                   '<button type="button" data-plus="' + id + '" aria-label="Add one">+</button>' +
+                 '</span>' +
+                 '<span class="pr">' + euro(it.price * q) + '</span>' +
+               '</div>';
+      }).join('')
+    : '<div class="empty">Nothing added yet.</div>';
+
+  list.querySelectorAll('[data-plus]').forEach(function(b){
+    b.addEventListener('click', function(e){ e.stopPropagation(); addToCart(b.dataset.plus); });
+  });
+  list.querySelectorAll('[data-minus]').forEach(function(b){
+    b.addEventListener('click', function(e){ e.stopPropagation(); removeOne(b.dataset.minus); });
+  });
+
+  /* la lista si apre da sola quando c'e qualcosa, e si richiude se e vuota */
+  if (count > 0) list.classList.add('open');
+  else list.classList.remove('open');
+
+  document.getElementById('cartTotal').textContent = euro(total);
+
+  const order = ids.map(function(id){
+    return cart[id] + ' \u00d7 ' + CATALOGUE[id].name + ' \u2014 ' + euro(CATALOGUE[id].price * cart[id]);
+  }).join('\n');
+
+  const msg = ids.length
+    ? 'Hello SmartCol, I would like to order:\n\n' + order + '\n\nTotal: ' + euro(total) +
+      '\n\nPlease confirm delivery and payment.'
+    : 'Hello SmartCol, I would like to order.';
+
+  document.getElementById('waOrder').href = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(msg);
+}
+
+function removeOne(id){
+  if (!cart[id]) return;
+  cart[id] -= 1;
+  if (cart[id] <= 0) delete cart[id];
+  render();
+}
+
+/* plegar / desplegar la lista, y vaciar el carrito */
+(function(){
+  const list   = document.getElementById('cartList');
+  const toggle = document.getElementById('cartToggle');
+  const clear  = document.getElementById('clearCart');
+  if (!toggle || !list) return;
+
+  toggle.addEventListener('click', function(e){
+    if (e.target.closest('#clearCart')) return;   /* ignorar el clic sobre "Clear" */
+    list.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', list.classList.contains('open') ? 'true' : 'false');
+  });
+
+  if (clear){
+    clear.addEventListener('click', function(e){
+      e.stopPropagation();
+      if (!Object.keys(cart).length) return;
+      if (confirm('Empty the order?')){ Object.keys(cart).forEach(function(k){ delete cart[k]; }); render(); }
+    });
+  }
+})();
+
+document.querySelectorAll('[data-buy]').forEach(b =>
+  b.addEventListener('click', () => addToCart(b.dataset.buy)));
+document.querySelectorAll('#thumbs .t').forEach(t =>
+  t.addEventListener('click', () => addToCart(t.dataset.add)));
+
+/* ---------- checkout ---------- */
+async function checkout(){
+  const ids = Object.keys(cart);
+  if (!ids.length){ alert('Your order is empty — tap a picture to add something first.'); return; }
+  const lines = ids.map(id => ({ id: id, qty: cart[id] }));
+
+  if (CHECKOUT_ENDPOINT && STRIPE_PK && STRIPE_PK.indexOf('REPLACE_ME') === -1){
+    try{
+      const btn = document.getElementById('payBtn');
+      btn.textContent = 'Opening checkout…';
+      const res  = await fetch(CHECKOUT_ENDPOINT, {
+        method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ items: lines })
+      });
+      const data = await res.json();
+      if (data && data.url){ window.location.href = data.url; return; }
+      throw new Error('no url');
+    } catch (err){ /* fall through */ }
+    finally { document.getElementById('payBtn').textContent = 'Pay securely with Stripe'; }
+  }
+
+  if (STRIPE_PAYMENT_LINK){ window.open(STRIPE_PAYMENT_LINK, '_blank'); return; }
+
+  document.getElementById('waOrder').click();
+}
+
+/* ---------- enquiry form ---------- */
+document.getElementById('enquiryForm').addEventListener('submit', e => {
   e.preventDefault();
   const f = e.target;
   const text =
-    "Hello SmartCol, my name is " + f.name.value.trim() + ".\n" +
-    "I am interested in: " + f.interest.value + ".\n" +
-    (f.country.value.trim() ? "Location: " + f.country.value.trim() + ".\n" : "") +
-    (f.message.value.trim() ? "Message: " + f.message.value.trim() : "");
-  window.open("https://wa.me/393208670068?text=" + encodeURIComponent(text), "_blank", "noopener");
+    'Hello SmartCol, my name is ' + f.name.value.trim() + '.\n' +
+    'I am interested in: ' + f.interest.value + '.\n' +
+    (f.country.value.trim() ? 'Location: ' + f.country.value.trim() + '.\n' : '') +
+    (f.message.value.trim() ? 'Message: ' + f.message.value.trim() : '');
+  window.open('https://wa.me/' + WA + '?text=' + encodeURIComponent(text), '_blank', 'noopener');
 });
 
-const io = new IntersectionObserver(entries => {
-  entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add("show"); io.unobserve(en.target); } });
-}, { threshold: .12 });
-document.querySelectorAll(".reveal").forEach(el => io.observe(el));
-
-document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById('year').textContent = new Date().getFullYear();
+render();
 </script>
-
 </body>
 </html>
